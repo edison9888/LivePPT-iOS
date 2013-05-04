@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12124CFD17352CD7009C22F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12124CFC17352CD7009C22F2 /* UIKit.framework */; };
+		12124CFF17352CD7009C22F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12124CFE17352CD7009C22F2 /* Foundation.framework */; };
+		12124D0117352CD7009C22F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12124D0017352CD7009C22F2 /* CoreGraphics.framework */; };
+		12124D0317352CD7009C22F2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12124D0217352CD7009C22F2 /* CoreData.framework */; };
+		12124D0917352CD7009C22F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12124D0717352CD7009C22F2 /* InfoPlist.strings */; };
+		12124D0B17352CD7009C22F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 12124D0A17352CD7009C22F2 /* main.m */; };
+		12124D0F17352CD7009C22F2 /* LPTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12124D0E17352CD7009C22F2 /* LPTAppDelegate.m */; };
+		12124D1117352CD7009C22F2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 12124D1017352CD7009C22F2 /* Default.png */; };
+		12124D1317352CD7009C22F2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12124D1217352CD7009C22F2 /* Default@2x.png */; };
+		12124D1517352CD7009C22F2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12124D1417352CD7009C22F2 /* Default-568h@2x.png */; };
+		12124D1817352CD7009C22F2 /* LivePPT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12124D1617352CD7009C22F2 /* LivePPT.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12124CF917352CD7009C22F2 /* LivePPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivePPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12124CFC17352CD7009C22F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		12124CFE17352CD7009C22F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		12124D0017352CD7009C22F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		12124D0217352CD7009C22F2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		12124D0617352CD7009C22F2 /* LivePPT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LivePPT-Info.plist"; sourceTree = "<group>"; };
+		12124D0817352CD7009C22F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		12124D0A17352CD7009C22F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		12124D0C17352CD7009C22F2 /* LivePPT-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LivePPT-Prefix.pch"; sourceTree = "<group>"; };
+		12124D0D17352CD7009C22F2 /* LPTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPTAppDelegate.h; sourceTree = "<group>"; };
+		12124D0E17352CD7009C22F2 /* LPTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPTAppDelegate.m; sourceTree = "<group>"; };
+		12124D1017352CD7009C22F2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		12124D1217352CD7009C22F2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		12124D1417352CD7009C22F2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		12124D1717352CD7009C22F2 /* LivePPT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LivePPT.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		12124CF617352CD7009C22F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12124CFD17352CD7009C22F2 /* UIKit.framework in Frameworks */,
+				12124CFF17352CD7009C22F2 /* Foundation.framework in Frameworks */,
+				12124D0117352CD7009C22F2 /* CoreGraphics.framework in Frameworks */,
+				12124D0317352CD7009C22F2 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12124CF017352CD7009C22F2 = {
+			isa = PBXGroup;
+			children = (
+				12124D0417352CD7009C22F2 /* LivePPT */,
+				12124CFB17352CD7009C22F2 /* Frameworks */,
+				12124CFA17352CD7009C22F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		12124CFA17352CD7009C22F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12124CF917352CD7009C22F2 /* LivePPT.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		12124CFB17352CD7009C22F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12124CFC17352CD7009C22F2 /* UIKit.framework */,
+				12124CFE17352CD7009C22F2 /* Foundation.framework */,
+				12124D0017352CD7009C22F2 /* CoreGraphics.framework */,
+				12124D0217352CD7009C22F2 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		12124D0417352CD7009C22F2 /* LivePPT */ = {
+			isa = PBXGroup;
+			children = (
+				12124D0D17352CD7009C22F2 /* LPTAppDelegate.h */,
+				12124D0E17352CD7009C22F2 /* LPTAppDelegate.m */,
+				12124D1617352CD7009C22F2 /* LivePPT.xcdatamodeld */,
+				12124D0517352CD7009C22F2 /* Supporting Files */,
+			);
+			path = LivePPT;
+			sourceTree = "<group>";
+		};
+		12124D0517352CD7009C22F2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				12124D0617352CD7009C22F2 /* LivePPT-Info.plist */,
+				12124D0717352CD7009C22F2 /* InfoPlist.strings */,
+				12124D0A17352CD7009C22F2 /* main.m */,
+				12124D0C17352CD7009C22F2 /* LivePPT-Prefix.pch */,
+				12124D1017352CD7009C22F2 /* Default.png */,
+				12124D1217352CD7009C22F2 /* Default@2x.png */,
+				12124D1417352CD7009C22F2 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		12124CF817352CD7009C22F2 /* LivePPT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12124D1B17352CD7009C22F2 /* Build configuration list for PBXNativeTarget "LivePPT" */;
+			buildPhases = (
+				12124CF517352CD7009C22F2 /* Sources */,
+				12124CF617352CD7009C22F2 /* Frameworks */,
+				12124CF717352CD7009C22F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LivePPT;
+			productName = LivePPT;
+			productReference = 12124CF917352CD7009C22F2 /* LivePPT.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		12124CF117352CD7009C22F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LPT;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Fever;
+			};
+			buildConfigurationList = 12124CF417352CD7009C22F2 /* Build configuration list for PBXProject "LivePPT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 12124CF017352CD7009C22F2;
+			productRefGroup = 12124CFA17352CD7009C22F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				12124CF817352CD7009C22F2 /* LivePPT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		12124CF717352CD7009C22F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12124D0917352CD7009C22F2 /* InfoPlist.strings in Resources */,
+				12124D1117352CD7009C22F2 /* Default.png in Resources */,
+				12124D1317352CD7009C22F2 /* Default@2x.png in Resources */,
+				12124D1517352CD7009C22F2 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		12124CF517352CD7009C22F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12124D0B17352CD7009C22F2 /* main.m in Sources */,
+				12124D0F17352CD7009C22F2 /* LPTAppDelegate.m in Sources */,
+				12124D1817352CD7009C22F2 /* LivePPT.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		12124D0717352CD7009C22F2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12124D0817352CD7009C22F2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		12124D1917352CD7009C22F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		12124D1A17352CD7009C22F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		12124D1C17352CD7009C22F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LivePPT/LivePPT-Prefix.pch";
+				INFOPLIST_FILE = "LivePPT/LivePPT-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		12124D1D17352CD7009C22F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LivePPT/LivePPT-Prefix.pch";
+				INFOPLIST_FILE = "LivePPT/LivePPT-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12124CF417352CD7009C22F2 /* Build configuration list for PBXProject "LivePPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12124D1917352CD7009C22F2 /* Debug */,
+				12124D1A17352CD7009C22F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12124D1B17352CD7009C22F2 /* Build configuration list for PBXNativeTarget "LivePPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12124D1C17352CD7009C22F2 /* Debug */,
+				12124D1D17352CD7009C22F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		12124D1617352CD7009C22F2 /* LivePPT.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				12124D1717352CD7009C22F2 /* LivePPT.xcdatamodel */,
+			);
+			currentVersion = 12124D1717352CD7009C22F2 /* LivePPT.xcdatamodel */;
+			path = LivePPT.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 12124CF117352CD7009C22F2 /* Project object */;
+}
