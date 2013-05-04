@@ -18,6 +18,7 @@
 		12124D1317352CD7009C22F2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12124D1217352CD7009C22F2 /* Default@2x.png */; };
 		12124D1517352CD7009C22F2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12124D1417352CD7009C22F2 /* Default-568h@2x.png */; };
 		12124D1817352CD7009C22F2 /* LivePPT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12124D1617352CD7009C22F2 /* LivePPT.xcdatamodeld */; };
+		12124D1F17353607009C22F2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12124D1E17353607009C22F2 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		12124D1217352CD7009C22F2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		12124D1417352CD7009C22F2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		12124D1717352CD7009C22F2 /* LivePPT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LivePPT.xcdatamodel; sourceTree = "<group>"; };
+		12124D1E17353607009C22F2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				12124D0E17352CD7009C22F2 /* LPTAppDelegate.m */,
 				12124D1617352CD7009C22F2 /* LivePPT.xcdatamodeld */,
 				12124D0517352CD7009C22F2 /* Supporting Files */,
+				12124D1E17353607009C22F2 /* MainStoryboard.storyboard */,
 			);
 			path = LivePPT;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				12124D1117352CD7009C22F2 /* Default.png in Resources */,
 				12124D1317352CD7009C22F2 /* Default@2x.png in Resources */,
 				12124D1517352CD7009C22F2 /* Default-568h@2x.png in Resources */,
+				12124D1F17353607009C22F2 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
