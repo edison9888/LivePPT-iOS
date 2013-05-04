@@ -19,6 +19,7 @@
 		12124D1517352CD7009C22F2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12124D1417352CD7009C22F2 /* Default-568h@2x.png */; };
 		12124D1817352CD7009C22F2 /* LivePPT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12124D1617352CD7009C22F2 /* LivePPT.xcdatamodeld */; };
 		12124D1F17353607009C22F2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12124D1E17353607009C22F2 /* MainStoryboard.storyboard */; };
+		12124D2217353E98009C22F2 /* LPTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12124D2117353E98009C22F2 /* LPTLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		12124D1417352CD7009C22F2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		12124D1717352CD7009C22F2 /* LivePPT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LivePPT.xcdatamodel; sourceTree = "<group>"; };
 		12124D1E17353607009C22F2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		12124D2017353E98009C22F2 /* LPTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTLoginViewController.h; sourceTree = "<group>"; };
+		12124D2117353E98009C22F2 /* LPTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				12124D1617352CD7009C22F2 /* LivePPT.xcdatamodeld */,
 				12124D0517352CD7009C22F2 /* Supporting Files */,
 				12124D1E17353607009C22F2 /* MainStoryboard.storyboard */,
+				12124D2017353E98009C22F2 /* LPTLoginViewController.h */,
+				12124D2117353E98009C22F2 /* LPTLoginViewController.m */,
 			);
 			path = LivePPT;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				12124D0B17352CD7009C22F2 /* main.m in Sources */,
 				12124D0F17352CD7009C22F2 /* LPTAppDelegate.m in Sources */,
 				12124D1817352CD7009C22F2 /* LivePPT.xcdatamodeld in Sources */,
+				12124D2217353E98009C22F2 /* LPTLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +264,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LivePPT/LivePPT-Prefix.pch";
 				INFOPLIST_FILE = "LivePPT/LivePPT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -269,6 +276,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LivePPT/LivePPT-Prefix.pch";
 				INFOPLIST_FILE = "LivePPT/LivePPT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
