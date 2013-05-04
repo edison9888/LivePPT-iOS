@@ -8,6 +8,8 @@
 
 #import "LPTLoginViewController.h"
 
+#import "AFJSONRequestOperation.h"
+
 @interface LPTLoginViewController ()
 
 @end
@@ -55,6 +57,14 @@
 }
 
 - (IBAction)loginButtonPressed:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://httpbin.org/ip"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSLog(@"IP Address: %@", [JSON valueForKeyPath:@"origin"]);
+    } failure:nil];
+    
+    [operation start];
     [self performSegueWithIdentifier:@"ShowTabSegue" sender:self];
 }
 @end

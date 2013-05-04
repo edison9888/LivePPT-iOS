@@ -16,32 +16,32 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="Wso-hV-Gur"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Email" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGM-EV-VQZ">
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WuU-5w-8wZ"/>
                                     <constraint firstAttribute="width" constant="86" id="x6q-h7-1Wy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oso-ld-Lg5">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gKy-8C-6Sl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LivePPT电邮帐号" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xq3-dT-jox">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Jq1-hk-X9N"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="您的密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6F1-gH-b2f">
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -61,25 +61,34 @@
                                     <action selector="loginButtonPressed:" destination="pOk-wQ-Sqf" eventType="touchUpInside" id="G6f-fJ-fnP"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="QVm-Zl-YVI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="Fr5-Rx-lCz"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6F1-gH-b2f" firstAttribute="leading" secondItem="Xq3-dT-jox" secondAttribute="leading" type="default" id="047-QF-4Hc"/>
                             <constraint firstAttribute="trailing" secondItem="Xq3-dT-jox" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2Go-zs-HVt"/>
-                            <constraint firstItem="2iv-nN-7ng" firstAttribute="leading" secondItem="oso-ld-Lg5" secondAttribute="leading" type="default" id="844-i8-eTb"/>
                             <constraint firstItem="oso-ld-Lg5" firstAttribute="baseline" secondItem="6F1-gH-b2f" secondAttribute="baseline" type="default" id="BB0-oX-wIc"/>
-                            <constraint firstItem="Xq3-dT-jox" firstAttribute="top" secondItem="QwF-qm-IFU" secondAttribute="top" constant="146" id="Bhh-uf-xdv"/>
+                            <constraint firstItem="RY8-CZ-Uw7" firstAttribute="top" secondItem="QwF-qm-IFU" secondAttribute="top" constant="64" id="Byt-lW-3nk"/>
+                            <constraint firstItem="Xq3-dT-jox" firstAttribute="leading" secondItem="dGM-EV-VQZ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="G0k-mN-R7E"/>
+                            <constraint firstItem="Xq3-dT-jox" firstAttribute="top" secondItem="QwF-qm-IFU" secondAttribute="top" constant="146" id="GGY-O7-KKz"/>
                             <constraint firstItem="oso-ld-Lg5" firstAttribute="bottom" secondItem="6F1-gH-b2f" secondAttribute="bottom" type="default" id="GL5-b0-aUM"/>
+                            <constraint firstAttribute="bottom" secondItem="2iv-nN-7ng" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="GM7-EX-8rE"/>
                             <constraint firstItem="RY8-CZ-Uw7" firstAttribute="leading" secondItem="QwF-qm-IFU" secondAttribute="leading" type="default" id="IGI-x6-aku"/>
+                            <constraint firstItem="oso-ld-Lg5" firstAttribute="leading" secondItem="QwF-qm-IFU" secondAttribute="leading" constant="37" id="IK1-C2-xpy"/>
+                            <constraint firstItem="6F1-gH-b2f" firstAttribute="leading" secondItem="Xq3-dT-jox" secondAttribute="leading" type="default" id="N54-tk-UfG"/>
+                            <constraint firstItem="6F1-gH-b2f" firstAttribute="leading" secondItem="oso-ld-Lg5" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="P2u-YC-89S"/>
                             <constraint firstAttribute="trailing" secondItem="2iv-nN-7ng" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rbq-db-LYW"/>
-                            <constraint firstItem="oso-ld-Lg5" firstAttribute="trailing" secondItem="dGM-EV-VQZ" secondAttribute="trailing" type="default" id="kaS-15-XOd"/>
+                            <constraint firstItem="Xq3-dT-jox" firstAttribute="leading" secondItem="QVm-Zl-YVI" secondAttribute="leading" type="default" id="a12-qB-76U"/>
+                            <constraint firstItem="oso-ld-Lg5" firstAttribute="leading" secondItem="dGM-EV-VQZ" secondAttribute="leading" type="default" id="c5u-vo-bpl"/>
+                            <constraint firstItem="QVm-Zl-YVI" firstAttribute="top" secondItem="QwF-qm-IFU" secondAttribute="top" constant="20" symbolic="YES" type="default" id="cmv-gn-elO"/>
+                            <constraint firstItem="QVm-Zl-YVI" firstAttribute="centerX" secondItem="RY8-CZ-Uw7" secondAttribute="centerX" type="default" id="mQd-cz-zw1"/>
+                            <constraint firstItem="6F1-gH-b2f" firstAttribute="top" secondItem="QwF-qm-IFU" secondAttribute="top" constant="205" id="nNZ-y6-CgB"/>
                             <constraint firstItem="RY8-CZ-Uw7" firstAttribute="trailing" secondItem="QwF-qm-IFU" secondAttribute="trailing" type="default" id="nsc-42-Sqp"/>
-                            <constraint firstAttribute="bottom" secondItem="2iv-nN-7ng" secondAttribute="bottom" constant="136" id="obZ-PV-Jmg"/>
-                            <constraint firstItem="RY8-CZ-Uw7" firstAttribute="top" secondItem="QwF-qm-IFU" secondAttribute="top" constant="30" id="oc1-7e-Tfc"/>
                             <constraint firstAttribute="trailing" secondItem="6F1-gH-b2f" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pCd-6r-6W2"/>
-                            <constraint firstItem="oso-ld-Lg5" firstAttribute="leading" secondItem="dGM-EV-VQZ" secondAttribute="leading" type="default" id="pii-Jp-I0S"/>
-                            <constraint firstItem="6F1-gH-b2f" firstAttribute="top" secondItem="QwF-qm-IFU" secondAttribute="top" constant="205" id="ql7-W1-wxW"/>
-                            <constraint firstItem="Xq3-dT-jox" firstAttribute="bottom" secondItem="dGM-EV-VQZ" secondAttribute="bottom" type="default" id="yiG-Qb-YNP"/>
+                            <constraint firstItem="dGM-EV-VQZ" firstAttribute="bottom" secondItem="Xq3-dT-jox" secondAttribute="bottom" type="default" id="swo-Kw-Rd5"/>
                         </constraints>
                     </view>
                     <connections>
@@ -153,6 +162,9 @@
             <point key="canvasLocation" x="-39" y="-381"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon.png" width="242" height="244"/>
+    </resources>
     <classes>
         <class className="LPTLoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTLoginViewController.h"/>
