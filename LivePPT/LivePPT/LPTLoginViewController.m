@@ -8,7 +8,8 @@
 
 #import "LPTLoginViewController.h"
 
-#import "AFJSONRequestOperation.h"
+#import "LPTJsonHttpClient.h"
+
 
 @interface LPTLoginViewController ()
 
@@ -29,8 +30,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,15 +55,39 @@
     NSLog(@"key wil show");
 }
 
+- (IBAction)textFieldDoneEditing:(id)sender {
+    [sender resignFirstResponder];
+}
+
 - (IBAction)loginButtonPressed:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://httpbin.org/ip"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    //从UI获取帐号和密码
+    NSString *passwordStr  =[[NSString alloc] initWithString:self.passwordInput.text];
+    NSString *emailStr  =[[NSString alloc] initWithString:self.emailInput.text];
     
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        NSLog(@"IP Address: %@", [JSON valueForKeyPath:@"origin"]);
-    } failure:nil];
+    //组装变量
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:emailStr forKey:@"email"];
+    [params setObject:passwordStr forKey:@"password"];
     
-    [operation start];
-    [self performSegueWithIdentifier:@"ShowTabSegue" sender:self];
+    //发出POST请求
+    [[LPTJsonHttpClient sharedClient] postPath:@"/app/login" parameters:params
+    success:^(AFHTTPRequestOperation *operation, id responseJSON) {
+        NSString *isSuccessStr = [responseJSON valueForKeyPath:@"isSuccess"];
+        id data = [responseJSON objectForKey:@"data"];
+        if ([isSuccessStr isEqualToString:@"true"]){
+            //登录成功
+            //触发Segue跳转
+            [self performSegueWithIdentifier:@"ShowTabSegue" sender:self];
+        } else {
+            //登录失败
+            //显示错误信息AlertView
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败" message:[data valueForKeyPath:@"message"] delegate:self cancelButtonTitle:@"明白" otherButtonTitles:nil];
+            [alertView show];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {        
+        //登录失败，显示错误信息AlertView
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败" message:@"请检查手机的网络连接。" delegate:self cancelButtonTitle:@"明白" otherButtonTitles:nil];
+        [alertView show];
+    }];
 }
 @end
