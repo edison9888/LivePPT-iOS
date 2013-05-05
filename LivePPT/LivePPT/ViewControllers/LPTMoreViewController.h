@@ -10,6 +10,8 @@
 
 @interface LPTMoreViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+
 - (IBAction)logoutButtonPressed:(id)sender;
 
 @end

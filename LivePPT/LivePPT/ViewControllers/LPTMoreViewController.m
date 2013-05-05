@@ -16,6 +16,8 @@
 
 @implementation LPTMoreViewController
 
+@synthesize emailLabel;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -28,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self prepareEmailLabel];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -99,5 +102,11 @@
     [UserLoginInfo saveInfo:loginInfo];
     [self performSegueWithIdentifier:@"LogoutBackToLoginSegue" sender:self];
     
+}
+
+- (void)prepareEmailLabel
+{
+    UserLoginInfo *loginInfo = [UserLoginInfo getInfo];
+    [self.emailLabel setText: [[NSString alloc] initWithFormat:@"%@%@", @"你的帐号: ", loginInfo.email]];
 }
 @end

@@ -100,38 +100,12 @@
                     <connections>
                         <outlet property="emailInput" destination="Xq3-dT-jox" id="YHb-GC-YCj"/>
                         <outlet property="passwordInput" destination="6F1-gH-b2f" id="Kcc-zj-UkY"/>
-                        <segue destination="hbP-9E-cuj" kind="modal" identifier="ShowTabSegue" id="EVl-uK-PHM"/>
+                        <segue destination="hbP-9E-cuj" kind="modal" identifier="ShowTabSegue" modalTransitionStyle="flipHorizontal" id="EVl-uK-PHM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhH-nH-hZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-80" y="-1106"/>
-        </scene>
-        <!--View Controller - Item 1-->
-        <scene sceneID="mwY-fK-pnv">
-            <objects>
-                <viewController id="bqG-x7-SMg" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Mh8-nk-BN0">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfH-nU-mgT">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="tfH-nU-mgT" firstAttribute="leading" secondItem="Mh8-nk-BN0" secondAttribute="leading" constant="122" id="gHF-sG-s22"/>
-                            <constraint firstAttribute="bottom" secondItem="tfH-nU-mgT" secondAttribute="bottom" constant="173" id="q8j-Ob-Ypi"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="cYa-pt-pco"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gDQ-Do-e0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="767" y="-990"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="g2a-BR-tGO">
@@ -144,7 +118,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="bqG-x7-SMg" kind="relationship" relationship="viewControllers" id="RNy-Hv-enG"/>
                         <segue destination="GOo-9c-81u" kind="relationship" relationship="viewControllers" id="p9a-Bg-B9X"/>
                     </connections>
                 </tabBarController>
@@ -163,13 +136,42 @@
                         <sections>
                             <tableViewSection id="vpQ-Dg-5cT">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="XkD-5Y-DZa">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="83" id="OUr-FG-dyu">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="D5o-2b-rgI">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="57" id="R03-hM-fgj"/>
+                                                        <constraint firstAttribute="width" constant="63" id="sZO-jp-50n"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="D5o-2b-rgI" firstAttribute="centerX" secondItem="OUr-FG-dyu" secondAttribute="centerX" type="default" id="bDr-oE-EWv"/>
+                                            <constraint firstItem="D5o-2b-rgI" firstAttribute="top" secondItem="OUr-FG-dyu" secondAttribute="top" constant="12" id="tJJ-qx-8Sg"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="118" id="XkD-5Y-DZa">
+                                        <rect key="frame" x="0.0" y="83" width="320" height="118"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="117"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwv-Ky-TLV">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="UEw-mt-CbQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83G-CM-mOd">
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="登出LivePPT帐号">
@@ -187,19 +189,13 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="83G-CM-mOd" firstAttribute="leading" secondItem="XkD-5Y-DZa" secondAttribute="leading" constant="20" type="default" id="nEe-vg-a0Z"/>
-                                            <constraint firstAttribute="trailing" secondItem="83G-CM-mOd" secondAttribute="trailing" constant="20" type="default" id="tm6-mY-Wyb"/>
-                                            <constraint firstItem="83G-CM-mOd" firstAttribute="top" secondItem="XkD-5Y-DZa" secondAttribute="top" constant="12" id="vRg-sf-ia3"/>
+                                            <constraint firstItem="jwv-Ky-TLV" firstAttribute="leading" secondItem="XkD-5Y-DZa" secondAttribute="leading" type="default" id="7UU-iG-kqF"/>
+                                            <constraint firstItem="jwv-Ky-TLV" firstAttribute="trailing" secondItem="XkD-5Y-DZa" secondAttribute="trailing" type="default" id="EZA-hS-jeM"/>
+                                            <constraint firstItem="83G-CM-mOd" firstAttribute="top" secondItem="jwv-Ky-TLV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Hu2-36-8Ge"/>
+                                            <constraint firstAttribute="trailing" secondItem="83G-CM-mOd" secondAttribute="trailing" constant="20" type="default" id="ZMB-z2-tz7"/>
+                                            <constraint firstItem="83G-CM-mOd" firstAttribute="leading" secondItem="XkD-5Y-DZa" secondAttribute="leading" constant="20" type="default" id="lCV-9a-RRj"/>
+                                            <constraint firstItem="jwv-Ky-TLV" firstAttribute="top" secondItem="XkD-5Y-DZa" secondAttribute="top" constant="20" type="default" id="yjh-bR-b1G"/>
                                         </constraints>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="04z-Th-43I">
-                                        <rect key="frame" x="0.0" y="69" width="320" height="69"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -211,6 +207,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="more" id="FJV-Rh-CYi"/>
                     <connections>
+                        <outlet property="emailLabel" destination="jwv-Ky-TLV" id="uID-7b-zB7"/>
                         <segue destination="pOk-wQ-Sqf" kind="modal" identifier="LogoutBackToLoginSegue" id="8EM-qM-UkP"/>
                     </connections>
                 </tableViewController>
@@ -222,6 +219,27 @@
     <resources>
         <image name="icon.png" width="242" height="244"/>
     </resources>
+    <classes>
+        <class className="LPTLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonPressed:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="outlet" name="emailInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordInput" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="LPTMoreViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTMoreViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logoutButtonPressed:"/>
+                <relationship kind="outlet" name="emailLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
