@@ -26,6 +26,8 @@
 		12570E7617363DA400207229 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 12570E7417363DA400207229 /* icon_114.png */; };
 		12570E7817363DD600207229 /* icon_54.png in Resources */ = {isa = PBXBuildFile; fileRef = 12570E7717363DD600207229 /* icon_54.png */; };
 		12570E7A17363DDE00207229 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 12570E7917363DDE00207229 /* icon_114.png */; };
+		12570E7E173654FF00207229 /* UserLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 12570E7D173654FF00207229 /* UserLoginInfo.m */; };
+		12570E811736B32300207229 /* LPTMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12570E801736B32300207229 /* LPTMoreViewController.m */; };
 		34CBB8910792488A8E123F0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA70F7AE11C4D2C9F911E0C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,10 @@
 		12570E7417363DA400207229 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
 		12570E7717363DD600207229 /* icon_54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_54.png; sourceTree = "<group>"; };
 		12570E7917363DDE00207229 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
+		12570E7C173654FF00207229 /* UserLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserLoginInfo.h; path = Models/UserLoginInfo.h; sourceTree = "<group>"; };
+		12570E7D173654FF00207229 /* UserLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserLoginInfo.m; path = Models/UserLoginInfo.m; sourceTree = "<group>"; };
+		12570E7F1736B32200207229 /* LPTMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPTMoreViewController.h; path = ViewControllers/LPTMoreViewController.h; sourceTree = "<group>"; };
+		12570E801736B32300207229 /* LPTMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPTMoreViewController.m; path = ViewControllers/LPTMoreViewController.m; sourceTree = "<group>"; };
 		9BA70F7AE11C4D2C9F911E0C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D511A8EA928E40BEA86C06B7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -110,14 +116,14 @@
 		12124D0417352CD7009C22F2 /* LivePPT */ = {
 			isa = PBXGroup;
 			children = (
+				12570E821736B32700207229 /* ViewControllers */,
+				12570E7B1736542900207229 /* Models */,
 				12570E6D1735EEC800207229 /* NetworkExtension */,
 				12124D0517352CD7009C22F2 /* Supporting Files */,
 				12124D0D17352CD7009C22F2 /* LPTAppDelegate.h */,
 				12124D0E17352CD7009C22F2 /* LPTAppDelegate.m */,
 				12124D1617352CD7009C22F2 /* LivePPT.xcdatamodeld */,
 				12124D1E17353607009C22F2 /* MainStoryboard.storyboard */,
-				12124D2017353E98009C22F2 /* LPTLoginViewController.h */,
-				12124D2117353E98009C22F2 /* LPTLoginViewController.m */,
 			);
 			path = LivePPT;
 			sourceTree = "<group>";
@@ -154,6 +160,26 @@
 				12124D23173561BD009C22F2 /* icon.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		12570E7B1736542900207229 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12570E7C173654FF00207229 /* UserLoginInfo.h */,
+				12570E7D173654FF00207229 /* UserLoginInfo.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		12570E821736B32700207229 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				12124D2017353E98009C22F2 /* LPTLoginViewController.h */,
+				12124D2117353E98009C22F2 /* LPTLoginViewController.m */,
+				12570E7F1736B32200207229 /* LPTMoreViewController.h */,
+				12570E801736B32300207229 /* LPTMoreViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +292,8 @@
 				12124D1817352CD7009C22F2 /* LivePPT.xcdatamodeld in Sources */,
 				12124D2217353E98009C22F2 /* LPTLoginViewController.m in Sources */,
 				12570E701735EF1700207229 /* LPTJsonHttpClient.m in Sources */,
+				12570E7E173654FF00207229 /* UserLoginInfo.m in Sources */,
+				12570E811736B32300207229 /* LPTMoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@
 
 @implementation LPTJsonHttpClient
 
-static NSString * const kAFAppDotNetAPIBaseURLString = @"http://192.168.1.109:9000";
+static NSString * const kAFAppDotNetAPIBaseURLString = @"http://192.168.1.106:9000";
 
 + (LPTJsonHttpClient *)sharedClient {
     static LPTJsonHttpClient *_sharedClient = nil;
