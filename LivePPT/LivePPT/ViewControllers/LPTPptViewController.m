@@ -1,22 +1,23 @@
 //
-//  LPTMoreViewController.m
+//  LPTPptViewController.m
 //  LivePPT
 //
-//  Created by Bowen Liang on 13-5-5.
+//  Created by Bowen Liang on 13-5-6.
 //  Copyright (c) 2013年 Fever. All rights reserved.
 //
 
-#import "LPTMoreViewController.h"
+#import "LPTPptViewController.h"
 
 #import "UserLoginInfo.h"
+#import "PptController.h"
+#import "Ppt.h"
+#import "LPTPptDetailsViewController.h"
 
-@interface LPTMoreViewController ()
+@interface LPTPptViewController ()
 
 @end
 
-@implementation LPTMoreViewController
-
-@synthesize emailLabel;
+@implementation LPTPptViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,7 +31,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self prepareEmailLabel];
+    
+    //UI准备
+    //NavigationBar左部加入刷新按钮
+    [self addRefreshButton];
+    
+    //刷新页面
+    [self refreshPptData];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -43,6 +50,35 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return [self.pptArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"PptCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    NSInteger row = [indexPath row];
+    id ppt = self.pptArray[row];
+    cell.textLabel.text = [ppt valueForKey:@"title"];
+    
+    // Configure the cell...
+    return cell;
 }
 
 /*
@@ -95,18 +131,37 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    [self performSegueWithIdentifier:@"ShowPptDetailSegue" sender:self];    
 }
 
-- (IBAction)logoutButtonPressed:(id)sender {
-    UserLoginInfo *loginInfo = NULL;
-    [UserLoginInfo saveInfo:loginInfo];
-    [self performSegueWithIdentifier:@"LogoutBackToLoginSegue" sender:self];
-    
-}
-
-- (void)prepareEmailLabel
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    UserLoginInfo *loginInfo = [UserLoginInfo getInfo];
-    [self.emailLabel setText: [[NSString alloc] initWithFormat:@"%@%@", @"你的帐号: ", loginInfo.email]];
+    if ([[segue identifier] isEqualToString:@"ShowPptDetailSegue"]){
+        LPTPptDetailsViewController *pdvc = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSInteger rowIndex = [indexPath row];
+        Ppt* ppt = self.pptArray[rowIndex];
+        [pdvc preparePptDetailsWithPpt:ppt];
+    }
+}
+
+
+// ////////////
+// Private Funs
+- (void)addRefreshButton
+{
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(selectLeftAction:)];
+    self.navigationItem.leftBarButtonItem = leftButton;
+}
+
+- (void)refreshPptData
+{
+    NSNumber *userId = [UserLoginInfo getUserId];
+    [[[PptController alloc] init] getPptList:userId controller:self];
+}
+
+- (IBAction)selectLeftAction:(id)sender
+{
+    [self refreshPptData];
 }
 @end

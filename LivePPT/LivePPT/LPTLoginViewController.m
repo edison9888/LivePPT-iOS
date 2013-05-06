@@ -82,30 +82,30 @@
     
     //发出POST请求
     [[LPTJsonHttpClient sharedClient] postPath:@"/app/login" parameters:params
-    success:^(AFHTTPRequestOperation *operation, id responseJSON) {
-        NSLog(@"LoginSuccess");
-        NSString *isSuccessStr = [responseJSON valueForKeyPath:@"isSuccess"];
-        id data = [responseJSON objectForKey:@"data"];
-        if ([isSuccessStr isEqualToString:@"true"]){
-            //登录成功
-            //在本地持久化登录信息
-            [self saveLoginInfo:data];
-            UserLoginInfo *loginInfo = [UserLoginInfo getInfo];
-            NSLog(@"LoginInfo Saved:[UserId:%@, Email:%@, DisplayName:%@]",[loginInfo.userId stringValue], loginInfo.email, loginInfo.displayName);
-            //触发Segue跳转至Tab
-            [self performSegueWithIdentifier:@"ShowTabSegue" sender:self];
-        } else {
-            //登录失败
-            //显示错误信息AlertView
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败" message:[data valueForKeyPath:@"message"] delegate:self cancelButtonTitle:@"明白" otherButtonTitles:nil];
-            [alertView show];
-        }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"LoginFailed");
-        //登录失败，显示错误信息AlertView
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败" message:@"请检查手机的网络连接。" delegate:self cancelButtonTitle:@"明白" otherButtonTitles:nil];
-        [alertView show];
-    }];
+                                       success:^(AFHTTPRequestOperation *operation, id responseJSON) {
+                                           NSLog(@"LoginSuccess");
+                                           NSString *isSuccessStr = [responseJSON valueForKeyPath:@"isSuccess"];
+                                           id data = [responseJSON objectForKey:@"data"];
+                                           if ([isSuccessStr isEqualToString:@"true"]){
+                                               //登录成功
+                                               //在本地持久化登录信息
+                                               [self saveLoginInfo:data];
+                                               UserLoginInfo *loginInfo = [UserLoginInfo getInfo];
+                                               NSLog(@"LoginInfo Saved:[UserId:%@, Email:%@, DisplayName:%@]",[loginInfo.userId stringValue], loginInfo.email, loginInfo.displayName);
+                                               //触发Segue跳转至Tab
+                                               [self performSegueWithIdentifier:@"ShowTabSegue" sender:self];
+                                           } else {
+                                               //登录失败
+                                               //显示错误信息AlertView
+                                               UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败" message:[data valueForKeyPath:@"message"] delegate:self cancelButtonTitle:@"明白" otherButtonTitles:nil];
+                                               [alertView show];
+                                           }
+                                       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                           NSLog(@"LoginFailed");
+                                           //登录失败，显示错误信息AlertView
+                                           UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败" message:@"请检查手机的网络连接。" delegate:self cancelButtonTitle:@"明白" otherButtonTitles:nil];
+                                           [alertView show];
+                                       }];
 }
 
 // //////////////

@@ -55,6 +55,11 @@ static NSString *KEY_DisplayName = @"displayName";
     NSLog(@"Current LoginInfo:[UserId:%@, Email:%@, DisplayName:%@]",[loginInfo.userId stringValue], loginInfo.email, loginInfo.displayName);
     return YES;
 }
+
+//获取用户Id
++(NSNumber *) getUserId{
+    return [UserLoginInfo getInfo].userId;
+}
     
 //pragma NSCoding协议实现实现
 - (void)encodeWithCoder:(NSCoder *)aCoder

@@ -17,5 +17,6 @@
 +(UserLoginInfo *) getInfo;
 +(void) saveInfo:(UserLoginInfo *) loginInfo;
 +(BOOL) isLoginInfoReady;
++(NSNumber *) getUserId;
 
 @end

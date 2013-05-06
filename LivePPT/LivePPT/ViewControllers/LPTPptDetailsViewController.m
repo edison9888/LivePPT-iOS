@@ -1,22 +1,18 @@
 //
-//  LPTMoreViewController.m
+//  LPTPptDetailsViewController.m
 //  LivePPT
 //
-//  Created by Bowen Liang on 13-5-5.
+//  Created by Bowen Liang on 13-5-6.
 //  Copyright (c) 2013年 Fever. All rights reserved.
 //
 
-#import "LPTMoreViewController.h"
+#import "LPTPptDetailsViewController.h"
 
-#import "UserLoginInfo.h"
-
-@interface LPTMoreViewController ()
+@interface LPTPptDetailsViewController ()
 
 @end
 
-@implementation LPTMoreViewController
-
-@synthesize emailLabel;
+@implementation LPTPptDetailsViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,13 +26,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self prepareEmailLabel];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    Ppt *ppt = self.ppt;
+    self.titleLabel.text = ppt.title;
+    self.uploadTimeLabel.text =ppt.time;
+    self.fileSizeLabel.text = [ppt.size stringValue];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,6 +44,35 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+ 
+ #pragma mark - Table view data source
+ 
+ - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+ {
+ #warning Potentially incomplete method implementation.
+ // Return the number of sections.
+ return 0;
+ }
+ 
+ - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+ {
+ #warning Incomplete method implementation.
+ // Return the number of rows in the section.
+ return 0;
+ }
+ 
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ static NSString *CellIdentifier = @"Cell";
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+ 
+ // Configure the cell...
+ 
+ return cell;
+ }
+ */
 
 /*
  // Override to support conditional editing of the table view.
@@ -97,16 +126,9 @@
      */
 }
 
-- (IBAction)logoutButtonPressed:(id)sender {
-    UserLoginInfo *loginInfo = NULL;
-    [UserLoginInfo saveInfo:loginInfo];
-    [self performSegueWithIdentifier:@"LogoutBackToLoginSegue" sender:self];
-    
+- (void)preparePptDetailsWithPpt:(Ppt*)ppt
+{
+    self.ppt = ppt;
 }
 
-- (void)prepareEmailLabel
-{
-    UserLoginInfo *loginInfo = [UserLoginInfo getInfo];
-    [self.emailLabel setText: [[NSString alloc] initWithFormat:@"%@%@", @"你的帐号: ", loginInfo.email]];
-}
 @end
