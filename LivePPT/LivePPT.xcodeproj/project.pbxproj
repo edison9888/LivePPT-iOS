@@ -22,6 +22,9 @@
 		12124D2217353E98009C22F2 /* LPTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12124D2117353E98009C22F2 /* LPTLoginViewController.m */; };
 		12124D24173561BD009C22F2 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 12124D23173561BD009C22F2 /* icon.png */; };
 		122E72691736E2C300F801B6 /* LPTPptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 122E72681736E2C300F801B6 /* LPTPptViewController.m */; };
+		123F3EB7173819A8007E87E7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123F3EB6173819A8007E87E7 /* CFNetwork.framework */; };
+		123F3EB9173819B3007E87E7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123F3EB8173819B3007E87E7 /* Security.framework */; };
+		123F3EBB173819D0007E87E7 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 123F3EBA173819D0007E87E7 /* libicucore.dylib */; };
 		12570E701735EF1700207229 /* LPTJsonHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 12570E6F1735EF1700207229 /* LPTJsonHttpClient.m */; };
 		12570E7517363DA400207229 /* icon_54.png in Resources */ = {isa = PBXBuildFile; fileRef = 12570E7317363DA400207229 /* icon_54.png */; };
 		12570E7617363DA400207229 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 12570E7417363DA400207229 /* icon_114.png */; };
@@ -57,6 +60,9 @@
 		12124D23173561BD009C22F2 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		122E72671736E2C300F801B6 /* LPTPptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPTPptViewController.h; path = ViewControllers/LPTPptViewController.h; sourceTree = "<group>"; };
 		122E72681736E2C300F801B6 /* LPTPptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPTPptViewController.m; path = ViewControllers/LPTPptViewController.m; sourceTree = "<group>"; };
+		123F3EB6173819A8007E87E7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		123F3EB8173819B3007E87E7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		123F3EBA173819D0007E87E7 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		12570E6E1735EF1700207229 /* LPTJsonHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPTJsonHttpClient.h; path = NetworkExtension/LPTJsonHttpClient.h; sourceTree = "<group>"; };
 		12570E6F1735EF1700207229 /* LPTJsonHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPTJsonHttpClient.m; path = NetworkExtension/LPTJsonHttpClient.m; sourceTree = "<group>"; };
 		12570E7317363DA400207229 /* icon_54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_54.png; sourceTree = "<group>"; };
@@ -82,8 +88,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12124CFD17352CD7009C22F2 /* UIKit.framework in Frameworks */,
+				123F3EBB173819D0007E87E7 /* libicucore.dylib in Frameworks */,
 				12124CFF17352CD7009C22F2 /* Foundation.framework in Frameworks */,
+				123F3EB9173819B3007E87E7 /* Security.framework in Frameworks */,
+				123F3EB7173819A8007E87E7 /* CFNetwork.framework in Frameworks */,
+				12124CFD17352CD7009C22F2 /* UIKit.framework in Frameworks */,
 				12124D0117352CD7009C22F2 /* CoreGraphics.framework in Frameworks */,
 				12124D0317352CD7009C22F2 /* CoreData.framework in Frameworks */,
 				34CBB8910792488A8E123F0B /* libPods.a in Frameworks */,
@@ -96,6 +105,7 @@
 		12124CF017352CD7009C22F2 = {
 			isa = PBXGroup;
 			children = (
+				123F3EB6173819A8007E87E7 /* CFNetwork.framework */,
 				12570E7917363DDE00207229 /* icon_114.png */,
 				12570E7717363DD600207229 /* icon_54.png */,
 				12124D0417352CD7009C22F2 /* LivePPT */,
@@ -116,6 +126,8 @@
 		12124CFB17352CD7009C22F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				123F3EBA173819D0007E87E7 /* libicucore.dylib */,
+				123F3EB8173819B3007E87E7 /* Security.framework */,
 				12124CFC17352CD7009C22F2 /* UIKit.framework */,
 				12124CFE17352CD7009C22F2 /* Foundation.framework */,
 				12124D0017352CD7009C22F2 /* CoreGraphics.framework */,
