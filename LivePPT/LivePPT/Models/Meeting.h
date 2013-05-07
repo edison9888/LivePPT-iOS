@@ -1,5 +1,5 @@
 //
-//  User.h
+//  Meeting.h
 //  LivePPT
 //
 //  Created by Bowen Liang on 13-5-8.
@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
+#import "Ppt.h"
+#import "User.h"
 
-@property NSNumber *userId;
-@property NSString *email;
-@property NSString *displayName;
+@interface Meeting : NSObject
+
+@property NSNumber *meetingId;
+@property Ppt *ppt;
+@property User *founder;
+@property NSString *topic;
 
 - (id) initWithJson:dataJson;
 
