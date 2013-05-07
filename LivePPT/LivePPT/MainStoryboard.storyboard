@@ -178,10 +178,94 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="我观看的会议" id="P1t-eV-MCa"/>
+                    <connections>
+                        <segue destination="Rlz-tA-174" kind="push" identifier="ShowAttendingMeetingDetailsSegue" id="uwI-Yz-QlA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qoj-zb-YQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="648" y="-365"/>
+        </scene>
+        <!--Table View Controller - 会议详情-->
+        <scene sceneID="4ZT-8J-gkG">
+            <objects>
+                <tableViewController id="Rlz-tA-174" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VAy-Md-YeF">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="4Ue-Op-wt9">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="yyU-Og-UCQ" detailTextLabel="ao1-CY-jGb" style="IBUITableViewCellStyleValue2" id="jBu-Ex-iVB">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="会议主题" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyU-Og-UCQ">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="textColor" red="0.32156862745098042" green="0.40000000000000002" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao1-CY-jGb">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Sw1-HR-a7d">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="c0U-DZ-OnQ">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17S-j2-zLk">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="进入会议PPT直播">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="17S-j2-zLk" secondAttribute="trailing" constant="20" type="default" id="OMC-9q-xiM"/>
+                                            <constraint firstItem="17S-j2-zLk" firstAttribute="leading" secondItem="c0U-DZ-OnQ" secondAttribute="leading" constant="20" type="default" id="UMm-SD-nbz"/>
+                                            <constraint firstItem="17S-j2-zLk" firstAttribute="top" secondItem="c0U-DZ-OnQ" secondAttribute="top" type="default" id="s9u-Cd-3yt"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Rlz-tA-174" id="oMA-pV-b9q"/>
+                            <outlet property="delegate" destination="Rlz-tA-174" id="tPi-Fj-SnA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="会议详情" id="3Ik-hX-Nea"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58m-me-fyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1255" y="-357"/>
         </scene>
         <!--Navigation Controller - Live-->
         <scene sceneID="e0C-WV-twh">
@@ -436,50 +520,6 @@
     <resources>
         <image name="icon.png" width="242" height="244"/>
     </resources>
-    <classes>
-        <class className="LPTAttendingMeetingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTAttendingMeetingsViewController.h"/>
-        </class>
-        <class className="LPTLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTLoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginButtonPressed:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="outlet" name="emailInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordInput" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="LPTMoreViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTMoreViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="logoutButtonPressed:"/>
-                <relationship kind="outlet" name="emailLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LPTPptDetailsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTPptDetailsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="fileSizeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="uploadTimeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LPTPptViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTPptViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="selectLeftAction:"/>
-            </relationships>
-        </class>
-        <class className="LPTWebSocketViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTWebSocketViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="wsPressed:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
