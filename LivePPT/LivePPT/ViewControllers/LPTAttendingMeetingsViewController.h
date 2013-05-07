@@ -10,4 +10,6 @@
 
 @interface LPTAttendingMeetingsViewController : UITableViewController
 
+@property NSMutableArray *meetings;
+
 @end

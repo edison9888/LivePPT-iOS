@@ -8,6 +8,9 @@
 
 #import "LPTAttendingMeetingsViewController.h"
 
+#import "Meeting.h"
+#import "UserLoginInfo.h"
+
 @interface LPTAttendingMeetingsViewController ()
 
 @end
@@ -32,6 +35,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self refreshMeetingsData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,22 +50,28 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.meetings.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"AttendingMeetingCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    NSUInteger meetingsCount = self.meetings.count;
+    NSUInteger row = [indexPath row];
+    if (meetingsCount>0){
+        Meeting *meeting = self.meetings[row];
+        cell.textLabel.text = meeting.topic;
+    }
     
     return cell;
 }
@@ -116,6 +126,14 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+
+
+-(void) refreshMeetingsData
+{    
+    NSNumber *userId = [UserLoginInfo getUserId];
+    [[Meeting alloc] getAttendingMeetingsList:userId controller:self];    
 }
 
 @end

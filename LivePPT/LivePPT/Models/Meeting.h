@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import "LPTAttendingMeetingsViewController.h"
 #import "Ppt.h"
 #import "User.h"
 
@@ -19,5 +20,7 @@
 @property NSString *topic;
 
 - (id) initWithJson:dataJson;
+
+- (void)getAttendingMeetingsList:(NSNumber *) userId controller:(LPTAttendingMeetingsViewController *)controller;
 
 @end
