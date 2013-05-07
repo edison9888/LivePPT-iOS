@@ -8,6 +8,7 @@
 
 #import "LPTAttendingMeetingsViewController.h"
 
+#import "LPTAttendingMeetingDetailsViewController.h"
 #import "Meeting.h"
 #import "UserLoginInfo.h"
 
@@ -126,6 +127,18 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    [self performSegueWithIdentifier:@"ShowAttendingMeetingDetailsSegue" sender:self];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSString *segueId = [segue identifier];
+    if ([segueId isEqualToString:@"ShowAttendingMeetingDetailsSegue"])
+    {
+        LPTAttendingMeetingDetailsViewController * amdvc = [segue destinationViewController];
+        NSUInteger rowSelected = [[self.tableView indexPathForSelectedRow] row];
+        [amdvc prepareDataWithMeeting:self.meetings[rowSelected]];
+    }
 }
 
 

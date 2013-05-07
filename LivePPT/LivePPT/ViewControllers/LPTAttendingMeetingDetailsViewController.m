@@ -8,6 +8,8 @@
 
 #import "LPTAttendingMeetingDetailsViewController.h"
 
+#import "Meeting.h"
+
 @interface LPTAttendingMeetingDetailsViewController ()
 
 @end
@@ -32,6 +34,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.meetingTopicLabel.text = self.meeting.topic;
 }
 
 - (void)didReceiveMemoryWarning
@@ -118,6 +122,12 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+
+-(void) prepareDataWithMeeting:(Meeting *)meeting
+{
+    self.meeting = meeting;
 }
 
 @end

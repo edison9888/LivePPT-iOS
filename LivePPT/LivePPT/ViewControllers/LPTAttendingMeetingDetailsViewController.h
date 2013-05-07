@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Meeting.h"
+
 @interface LPTAttendingMeetingDetailsViewController : UITableViewController
+
+@property Meeting *meeting;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *meetingTopicLabel;
+
+-(void) prepareDataWithMeeting:(Meeting *)meeting;
 
 @end
