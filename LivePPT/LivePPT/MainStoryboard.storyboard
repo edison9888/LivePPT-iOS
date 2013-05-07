@@ -243,6 +243,9 @@
                                                     <state key="highlighted">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="btnEnterLiveWatchingMeetingPressed:" destination="Rlz-tA-174" eventType="touchUpInside" id="C5X-7e-Yal"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -264,11 +267,39 @@
                     <navigationItem key="navigationItem" title="会议详情" id="3Ik-hX-Nea"/>
                     <connections>
                         <outlet property="meetingTopicLabel" destination="ao1-CY-jGb" id="JSO-z3-dQA"/>
+                        <segue destination="dAE-nX-nPo" kind="push" identifier="ShowLiveWatchingMeetingSegue" id="ZY0-x1-29o"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58m-me-fyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1255" y="-357"/>
+            <point key="canvasLocation" x="1255" y="-353"/>
+        </scene>
+        <!--Live Watching Meeting View Controller - PPT直播页面-->
+        <scene sceneID="oQw-Bg-aJ8">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="dAE-nX-nPo" customClass="LPTLiveWatchingMeetingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hlu-rp-guG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5V-wO-gpf"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q5V-wO-gpf" firstAttribute="trailing" secondItem="hlu-rp-guG" secondAttribute="trailing" type="default" id="6DV-Ym-890"/>
+                            <constraint firstItem="q5V-wO-gpf" firstAttribute="leading" secondItem="hlu-rp-guG" secondAttribute="leading" type="default" id="Vpc-6Q-ksk"/>
+                            <constraint firstItem="q5V-wO-gpf" firstAttribute="top" secondItem="hlu-rp-guG" secondAttribute="top" type="default" id="asK-qR-Wfz"/>
+                            <constraint firstItem="q5V-wO-gpf" firstAttribute="bottom" secondItem="hlu-rp-guG" secondAttribute="bottom" type="default" id="wcK-wb-So3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PPT直播页面" id="27i-oc-ohU"/>
+                    <connections>
+                        <outlet property="currentPageImageView" destination="q5V-wO-gpf" id="9uT-gh-Pqj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6w-Nc-AUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949" y="-333"/>
         </scene>
         <!--Navigation Controller - Live-->
         <scene sceneID="e0C-WV-twh">
@@ -523,53 +554,6 @@
     <resources>
         <image name="icon.png" width="242" height="244"/>
     </resources>
-    <classes>
-        <class className="LPTAttendingMeetingDetailsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTAttendingMeetingDetailsViewController.h"/>
-        </class>
-        <class className="LPTAttendingMeetingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTAttendingMeetingsViewController.h"/>
-        </class>
-        <class className="LPTLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTLoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginButtonPressed:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="outlet" name="emailInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordInput" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="LPTMoreViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTMoreViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="logoutButtonPressed:"/>
-                <relationship kind="outlet" name="emailLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LPTPptDetailsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTPptDetailsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="fileSizeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="uploadTimeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LPTPptViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTPptViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="selectLeftAction:"/>
-            </relationships>
-        </class>
-        <class className="LPTWebSocketViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTWebSocketViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="wsPressed:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

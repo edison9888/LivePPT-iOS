@@ -17,6 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *meetingTopicLabel;
 
+- (IBAction)btnEnterLiveWatchingMeetingPressed:(id)sender;
+
 -(void) prepareDataWithMeeting:(Meeting *)meeting;
 
 @end

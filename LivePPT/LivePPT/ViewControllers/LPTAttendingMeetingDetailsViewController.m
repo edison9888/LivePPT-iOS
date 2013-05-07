@@ -8,6 +8,7 @@
 
 #import "LPTAttendingMeetingDetailsViewController.h"
 
+#import "LPTLiveWatchingMeetingViewController.h"
 #import "Meeting.h"
 
 @interface LPTAttendingMeetingDetailsViewController ()
@@ -124,6 +125,21 @@
      */
 }
 
+
+- (IBAction)btnEnterLiveWatchingMeetingPressed:(id)sender {
+    [self performSegueWithIdentifier:@"ShowLiveWatchingMeetingSegue" sender:self];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSString *segueId = [segue identifier];
+    if ([segueId isEqualToString:@"ShowLiveWatchingMeetingSegue"])
+    {
+        LPTLiveWatchingMeetingViewController *lwmv = [segue destinationViewController];
+        [lwmv prepareDataWithMeeting:self.meeting];
+        
+    }
+}
 
 -(void) prepareDataWithMeeting:(Meeting *)meeting
 {

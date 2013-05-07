@@ -37,7 +37,9 @@
 		12B7849017399EF400C7764F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B7848F17399EF400C7764F /* User.m */; };
 		12B784931739A00200C7764F /* Meeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B784921739A00200C7764F /* Meeting.m */; };
 		12B784961739A1F900C7764F /* LPTAttendingMeetingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B784951739A1F900C7764F /* LPTAttendingMeetingsViewController.m */; };
-		12B784991739A69300C7764F /* LPTAttendingMeetingDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B784981739A69300C7764F /* LPTAttendingMeetingDetailsViewController.m */; };
+		12B7849F1739AAE600C7764F /* LPTLiveWatchingMeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B7849E1739AAE600C7764F /* LPTLiveWatchingMeetingViewController.m */; };
+		12B784A21739AB6600C7764F /* LPTAttendingMeetingDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B784A11739AB6600C7764F /* LPTAttendingMeetingDetailsViewController.m */; };
+		12B784A51739AF8500C7764F /* LPTLiveWatchingWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B784A41739AF8500C7764F /* LPTLiveWatchingWebSocket.m */; };
 		12FB97CC17378C4100B68128 /* Ppt.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FB97CB17378C4100B68128 /* Ppt.m */; };
 		12FB97CF17378CC100B68128 /* PptController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FB97CE17378CC100B68128 /* PptController.m */; };
 		12FB97D81738009F00B68128 /* LPTPptDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FB97D71738009F00B68128 /* LPTPptDetailsViewController.m */; };
@@ -89,8 +91,12 @@
 		12B784921739A00200C7764F /* Meeting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Meeting.m; path = Models/Meeting.m; sourceTree = "<group>"; };
 		12B784941739A1F900C7764F /* LPTAttendingMeetingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPTAttendingMeetingsViewController.h; path = ViewControllers/LPTAttendingMeetingsViewController.h; sourceTree = "<group>"; };
 		12B784951739A1F900C7764F /* LPTAttendingMeetingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPTAttendingMeetingsViewController.m; path = ViewControllers/LPTAttendingMeetingsViewController.m; sourceTree = "<group>"; };
-		12B784971739A69300C7764F /* LPTAttendingMeetingDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPTAttendingMeetingDetailsViewController.h; path = ViewControllers/LPTAttendingMeetingDetailsViewController.h; sourceTree = "<group>"; };
-		12B784981739A69300C7764F /* LPTAttendingMeetingDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPTAttendingMeetingDetailsViewController.m; path = ViewControllers/LPTAttendingMeetingDetailsViewController.m; sourceTree = "<group>"; };
+		12B7849D1739AAE600C7764F /* LPTLiveWatchingMeetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPTLiveWatchingMeetingViewController.h; path = ViewControllers/LPTLiveWatchingMeetingViewController.h; sourceTree = "<group>"; };
+		12B7849E1739AAE600C7764F /* LPTLiveWatchingMeetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPTLiveWatchingMeetingViewController.m; path = ViewControllers/LPTLiveWatchingMeetingViewController.m; sourceTree = "<group>"; };
+		12B784A01739AB6600C7764F /* LPTAttendingMeetingDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPTAttendingMeetingDetailsViewController.h; path = ViewControllers/LPTAttendingMeetingDetailsViewController.h; sourceTree = "<group>"; };
+		12B784A11739AB6600C7764F /* LPTAttendingMeetingDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPTAttendingMeetingDetailsViewController.m; path = ViewControllers/LPTAttendingMeetingDetailsViewController.m; sourceTree = "<group>"; };
+		12B784A31739AF8500C7764F /* LPTLiveWatchingWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPTLiveWatchingWebSocket.h; path = NetworkExtension/LPTLiveWatchingWebSocket.h; sourceTree = "<group>"; };
+		12B784A41739AF8500C7764F /* LPTLiveWatchingWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPTLiveWatchingWebSocket.m; path = NetworkExtension/LPTLiveWatchingWebSocket.m; sourceTree = "<group>"; };
 		12FB97CA17378C4100B68128 /* Ppt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ppt.h; path = Models/Ppt.h; sourceTree = "<group>"; };
 		12FB97CB17378C4100B68128 /* Ppt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ppt.m; path = Models/Ppt.m; sourceTree = "<group>"; };
 		12FB97CD17378CC100B68128 /* PptController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PptController.h; path = Models/PptController.h; sourceTree = "<group>"; };
@@ -189,6 +195,8 @@
 				12570E6F1735EF1700207229 /* LPTJsonHttpClient.m */,
 				123F3EBC17381CCE007E87E7 /* LPTViewMeetingWebSocket.h */,
 				123F3EBD17381CCE007E87E7 /* LPTViewMeetingWebSocket.m */,
+				12B784A31739AF8500C7764F /* LPTLiveWatchingWebSocket.h */,
+				12B784A41739AF8500C7764F /* LPTLiveWatchingWebSocket.m */,
 			);
 			name = NetworkExtension;
 			sourceTree = "<group>";
@@ -226,6 +234,8 @@
 		12570E821736B32700207229 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				12B784A01739AB6600C7764F /* LPTAttendingMeetingDetailsViewController.h */,
+				12B784A11739AB6600C7764F /* LPTAttendingMeetingDetailsViewController.m */,
 				12124D2017353E98009C22F2 /* LPTLoginViewController.h */,
 				12124D2117353E98009C22F2 /* LPTLoginViewController.m */,
 				12570E7F1736B32200207229 /* LPTMoreViewController.h */,
@@ -238,8 +248,8 @@
 				125D77F917381F11002F161A /* LPTWebSocketViewController.m */,
 				12B784941739A1F900C7764F /* LPTAttendingMeetingsViewController.h */,
 				12B784951739A1F900C7764F /* LPTAttendingMeetingsViewController.m */,
-				12B784971739A69300C7764F /* LPTAttendingMeetingDetailsViewController.h */,
-				12B784981739A69300C7764F /* LPTAttendingMeetingDetailsViewController.m */,
+				12B7849D1739AAE600C7764F /* LPTLiveWatchingMeetingViewController.h */,
+				12B7849E1739AAE600C7764F /* LPTLiveWatchingMeetingViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -365,7 +375,9 @@
 				12B7849017399EF400C7764F /* User.m in Sources */,
 				12B784931739A00200C7764F /* Meeting.m in Sources */,
 				12B784961739A1F900C7764F /* LPTAttendingMeetingsViewController.m in Sources */,
-				12B784991739A69300C7764F /* LPTAttendingMeetingDetailsViewController.m in Sources */,
+				12B7849F1739AAE600C7764F /* LPTLiveWatchingMeetingViewController.m in Sources */,
+				12B784A21739AB6600C7764F /* LPTAttendingMeetingDetailsViewController.m in Sources */,
+				12B784A51739AF8500C7764F /* LPTLiveWatchingWebSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
