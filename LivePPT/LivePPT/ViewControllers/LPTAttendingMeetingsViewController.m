@@ -30,6 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(selectLeftAction:)];
+    self.navigationItem.leftBarButtonItem = leftButton;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -147,6 +150,11 @@
 {    
     NSNumber *userId = [UserLoginInfo getUserId];
     [[Meeting alloc] getAttendingMeetingsList:userId controller:self];    
+}
+
+- (IBAction)selectLeftAction:(id)sender
+{
+    [self refreshMeetingsData];
 }
 
 @end
