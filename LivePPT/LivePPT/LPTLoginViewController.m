@@ -37,7 +37,6 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     if ([UserLoginInfo isLoginInfoReady]){
-        NSLog(@"ready");
         [self performSegueWithIdentifier:@"ShowTabSegue" sender:self];
     }
 }

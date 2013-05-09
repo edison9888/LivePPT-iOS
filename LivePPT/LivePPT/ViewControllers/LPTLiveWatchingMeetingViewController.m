@@ -60,13 +60,13 @@ static NSString *IMG_BASE_URL = @"http://localhost:9000/getpptpage";
 
 // implementing SRWebSocketDelegate methods
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket{
-    NSLog(@"OPEN!!");
+    NSLog(@"WS_OPEN!!");
     [webSocket send:[self.meeting.meetingId stringValue]];
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message
 {
-    NSLog(@"mess Recieved:%@", message);
+    NSLog(@"WS mess recieved:%@", message);
     NSArray *splitedMess = [message componentsSeparatedByString:@"-"];
     NSNumber *pageIndex = [[NSNumber alloc] initWithInt:[splitedMess[1] intValue]];
     [self setPageImgWithIndex:pageIndex];
@@ -74,7 +74,7 @@ static NSString *IMG_BASE_URL = @"http://localhost:9000/getpptpage";
 
 
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error{
-    NSLog(@"ERROE!");
+    NSLog(@"WS_FAILED!");
 }
 
 @end
