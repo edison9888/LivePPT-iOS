@@ -7,13 +7,17 @@
 //
 
 #import "LPTJsonHttpClient.h"
+
 #import "AFJSONRequestOperation.h"
+#import "NetworkProperty.h"
 
 @implementation LPTJsonHttpClient
 
-static NSString * const kAFAppDotNetAPIBaseURLString = @"http://192.168.1.104:9000";
 
 + (LPTJsonHttpClient *)sharedClient {
+    NSString * const kAFAppDotNetAPIBaseURLString = [NetworkProperty getHttpBaseUrlStr];
+    NSLog(kAFAppDotNetAPIBaseURLString);
+    
     static LPTJsonHttpClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

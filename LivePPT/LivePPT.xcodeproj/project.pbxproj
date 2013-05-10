@@ -38,6 +38,8 @@
 		12B7849F1739AAE600C7764F /* LPTLiveWatchingMeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B7849E1739AAE600C7764F /* LPTLiveWatchingMeetingViewController.m */; };
 		12B784A21739AB6600C7764F /* LPTAttendingMeetingDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B784A11739AB6600C7764F /* LPTAttendingMeetingDetailsViewController.m */; };
 		12B784A51739AF8500C7764F /* LPTLiveWatchingWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B784A41739AF8500C7764F /* LPTLiveWatchingWebSocket.m */; };
+		12D65D07173BB68900CE6CF0 /* NetworkProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D65D06173BB68900CE6CF0 /* NetworkProperty.m */; };
+		12D65D11173BBE6500CE6CF0 /* NetworkProperty.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12D65D10173BBE6500CE6CF0 /* NetworkProperty.plist */; };
 		12FB97CC17378C4100B68128 /* Ppt.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FB97CB17378C4100B68128 /* Ppt.m */; };
 		12FB97CF17378CC100B68128 /* PptController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FB97CE17378CC100B68128 /* PptController.m */; };
 		12FB97D81738009F00B68128 /* LPTPptDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FB97D71738009F00B68128 /* LPTPptDetailsViewController.m */; };
@@ -91,6 +93,9 @@
 		12B784A11739AB6600C7764F /* LPTAttendingMeetingDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPTAttendingMeetingDetailsViewController.m; path = ViewControllers/LPTAttendingMeetingDetailsViewController.m; sourceTree = "<group>"; };
 		12B784A31739AF8500C7764F /* LPTLiveWatchingWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPTLiveWatchingWebSocket.h; path = NetworkExtension/LPTLiveWatchingWebSocket.h; sourceTree = "<group>"; };
 		12B784A41739AF8500C7764F /* LPTLiveWatchingWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPTLiveWatchingWebSocket.m; path = NetworkExtension/LPTLiveWatchingWebSocket.m; sourceTree = "<group>"; };
+		12D65D05173BB68900CE6CF0 /* NetworkProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkProperty.h; path = Models/NetworkProperty.h; sourceTree = "<group>"; };
+		12D65D06173BB68900CE6CF0 /* NetworkProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkProperty.m; path = Models/NetworkProperty.m; sourceTree = "<group>"; };
+		12D65D10173BBE6500CE6CF0 /* NetworkProperty.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NetworkProperty.plist; sourceTree = "<group>"; };
 		12FB97CA17378C4100B68128 /* Ppt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ppt.h; path = Models/Ppt.h; sourceTree = "<group>"; };
 		12FB97CB17378C4100B68128 /* Ppt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ppt.m; path = Models/Ppt.m; sourceTree = "<group>"; };
 		12FB97CD17378CC100B68128 /* PptController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PptController.h; path = Models/PptController.h; sourceTree = "<group>"; };
@@ -173,6 +178,7 @@
 		12124D0517352CD7009C22F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				12D65D10173BBE6500CE6CF0 /* NetworkProperty.plist */,
 				12570E7217363B8C00207229 /* Images */,
 				12124D0617352CD7009C22F2 /* LivePPT-Info.plist */,
 				12124D0717352CD7009C22F2 /* InfoPlist.strings */,
@@ -219,6 +225,8 @@
 				12B7848F17399EF400C7764F /* User.m */,
 				12B784911739A00200C7764F /* Meeting.h */,
 				12B784921739A00200C7764F /* Meeting.m */,
+				12D65D05173BB68900CE6CF0 /* NetworkProperty.h */,
+				12D65D06173BB68900CE6CF0 /* NetworkProperty.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 				12570E7617363DA400207229 /* icon_114.png in Resources */,
 				12570E7817363DD600207229 /* icon_54.png in Resources */,
 				12570E7A17363DDE00207229 /* icon_114.png in Resources */,
+				12D65D11173BBE6500CE6CF0 /* NetworkProperty.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +375,7 @@
 				12B7849F1739AAE600C7764F /* LPTLiveWatchingMeetingViewController.m in Sources */,
 				12B784A21739AB6600C7764F /* LPTAttendingMeetingDetailsViewController.m in Sources */,
 				12B784A51739AF8500C7764F /* LPTLiveWatchingWebSocket.m in Sources */,
+				12D65D07173BB68900CE6CF0 /* NetworkProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

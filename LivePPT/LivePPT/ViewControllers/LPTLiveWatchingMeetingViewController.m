@@ -36,6 +36,7 @@ static NSString *IMG_BASE_URL = @"http://localhost:9000/getpptpage";
     
     self.ws = [[LPTLiveWatchingWebSocket alloc] initWithDelegate:self];
     [self.ws open];
+    self.navigationItem.backBarButtonItem.alloc
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,7 +61,7 @@ static NSString *IMG_BASE_URL = @"http://localhost:9000/getpptpage";
 
 // implementing SRWebSocketDelegate methods
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket{
-    NSLog(@"WS_OPEN!!");
+    NSLog(@"WS_OPEN!! [%@]", [webSocket url]);
     [webSocket send:[self.meeting.meetingId stringValue]];
 }
 
@@ -74,7 +75,7 @@ static NSString *IMG_BASE_URL = @"http://localhost:9000/getpptpage";
 
 
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error{
-    NSLog(@"WS_FAILED!");
+    NSLog(@"WS_FAILED! :%@",error);
 }
 
 @end

@@ -8,14 +8,18 @@
 
 #import "LPTLiveWatchingWebSocket.h"
 
+#import "NetworkProperty.h"
+
 @implementation LPTLiveWatchingWebSocket
 
-static NSString *LIVE_WATCHING_WS_ADDRESS = @"ws://192.168.1.104:9000/viewWebsocket";
-
 -(id) initWithDelegate:aDelegate{
+    NSString *LIVE_WATCHING_WS_ADDRESS = [[NSString alloc] initWithFormat:@"%@/viewWebsocket", [NetworkProperty getWSBaseUrlStr]];
+    
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:LIVE_WATCHING_WS_ADDRESS]];
+    
     self = [super initWithURLRequest:request];
     self.delegate = aDelegate;
+    
     return self;
 }
 
