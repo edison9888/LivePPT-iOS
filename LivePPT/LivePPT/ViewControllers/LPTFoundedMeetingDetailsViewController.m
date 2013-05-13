@@ -1,22 +1,21 @@
 //
-//  LPTFoundedMeetingsViewController.m
+//  LPTFoundedMeetingDetailsViewController.m
 //  LivePPT
 //
-//  Created by Bowen Liang on 13-5-13.
+//  Created by Bowen Liang on 13-5-14.
 //  Copyright (c) 2013年 Fever. All rights reserved.
 //
 
-#import "LPTFoundedMeetingsViewController.h"
-
 #import "LPTFoundedMeetingDetailsViewController.h"
-#import "Meeting.h"
-#import "UserLoginInfo.h"
 
-@interface LPTFoundedMeetingsViewController ()
+#import "LPTControlMeetingViewController.h"
+#import "Meeting.h"
+
+@interface LPTFoundedMeetingDetailsViewController ()
 
 @end
 
-@implementation LPTFoundedMeetingsViewController
+@implementation LPTFoundedMeetingDetailsViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,16 +29,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(selectLeftAction:)];
-    self.navigationItem.leftBarButtonItem = leftButton;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self refreshMeetingsData];
+    self.topicLabel.text = self.meeting.topic;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,37 +44,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return self.meetings.count;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"FoundedMeetingCell";
+    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSUInteger meetingsCount = self.meetings.count;
-    NSUInteger row = [indexPath row];
-    if (meetingsCount>0){
-        Meeting *meeting = self.meetings[row];
-        cell.textLabel.text = meeting.topic;
-    }
     
     return cell;
 }
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -130,29 +123,26 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-    [self performSegueWithIdentifier:@"ShowFoundedMeetingDetailsSegue" sender:self];
 }
 
--(void) refreshMeetingsData
+- (void) prepareDataWithMeeting:(Meeting *) meeting
 {
-    NSNumber *userId = [UserLoginInfo getUserId];
-    [[Meeting alloc] getFoundedMeetingsList:userId controller:self];
+    self.meeting = meeting;
 }
 
--(IBAction)selectLeftAction:(id)sender
-{
-    [self refreshMeetingsData];
+- (IBAction)btnEnterControlMeetingPressed:(id)sender {
+    [self performSegueWithIdentifier:@"ShowControlMeetingSegue" sender:self];
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSString *segueId = [segue identifier];
-    if ([segueId isEqualToString:@"ShowFoundedMeetingDetailsSegue"])
-    {
-        LPTFoundedMeetingDetailsViewController * amdvc = [segue destinationViewController];
-        NSUInteger rowSelected = [[self.tableView indexPathForSelectedRow] row];
-        [amdvc prepareDataWithMeeting:self.meetings[rowSelected]];
+    if ([segueId isEqualToString:@"ShowControlMeetingSegue"]) {
+        LPTControlMeetingViewController *cmvc = [segue destinationViewController];
+        [cmvc prepareDataWithMeeting:self.meeting];
     }
 }
+
+
 
 @end

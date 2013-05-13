@@ -14,6 +14,7 @@
 @property NSString *title;
 @property NSString *time;
 @property NSNumber *size;
+@property NSNumber *pageCount;
 
 - (id) initWithJson:dataJson;
 

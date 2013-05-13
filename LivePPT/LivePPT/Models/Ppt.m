@@ -17,6 +17,7 @@
     ppt.title = [dataJson valueForKeyPath:@"title"];
     ppt.pptId = [dataJson valueForKeyPath:@"pptId"];
     ppt.size = [dataJson valueForKeyPath:@"size"];
+    ppt.pageCount = [dataJson valueForKeyPath:@"pageCount"];    
     
     return ppt;
 }
