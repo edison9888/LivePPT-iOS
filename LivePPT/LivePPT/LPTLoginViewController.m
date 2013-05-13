@@ -83,9 +83,9 @@
     [[LPTJsonHttpClient sharedClient] postPath:@"/app/login" parameters:params
                                        success:^(AFHTTPRequestOperation *operation, id responseJSON) {
                                            NSLog(@"LoginSuccess");
-                                           NSString *isSuccessStr = [responseJSON valueForKeyPath:@"isSuccess"];
+                                           NSNumber *isSuccessStr = [responseJSON valueForKeyPath:@"isSuccess"];
                                            id data = [responseJSON objectForKey:@"data"];
-                                           if ([isSuccessStr isEqualToString:@"true"]){
+                                           if ([isSuccessStr isEqualToNumber:[[NSNumber alloc] initWithInt:1]]){
                                                //登录成功
                                                //在本地持久化登录信息
                                                [self saveLoginInfo:data];
