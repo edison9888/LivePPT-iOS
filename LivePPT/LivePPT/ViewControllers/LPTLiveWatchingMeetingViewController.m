@@ -17,7 +17,7 @@
 
 @implementation LPTLiveWatchingMeetingViewController
 
-static NSString *IMG_BASE_URL = @"http://localhost:9000/getpptpage";
+static NSString *IMG_BASE_URL = @"http://192.168.1.103:9000/getpptpage";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,7 +36,6 @@ static NSString *IMG_BASE_URL = @"http://localhost:9000/getpptpage";
     
     self.ws = [[LPTLiveWatchingWebSocket alloc] initWithDelegate:self];
     [self.ws open];
-    self.navigationItem.backBarButtonItem.alloc
 }
 
 - (void)didReceiveMemoryWarning

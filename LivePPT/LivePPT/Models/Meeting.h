@@ -21,6 +21,8 @@
 
 - (id) initWithJson:dataJson;
 
-- (void)getAttendingMeetingsList:(NSNumber *) userId controller:(LPTAttendingMeetingsViewController *)controller;
+- (void) getAttendingMeetingsList:(NSNumber *) userId controller:(LPTAttendingMeetingsViewController *)controller;
+
+- (void) getFoundedMeetingsList:(NSNumber *) userId controller:(LPTAttendingMeetingsViewController *)controller;
 
 @end

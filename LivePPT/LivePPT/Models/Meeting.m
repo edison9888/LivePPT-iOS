@@ -9,6 +9,7 @@
 #import "Meeting.h"
 
 #import "LPTAttendingMeetingsViewController.h"
+#import "LPTFoundedMeetingsViewController.h"
 #import "LPTJsonHttpClient.h"
 
 @implementation Meeting
@@ -34,8 +35,10 @@
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setObject:userId forKey:@"userId"];
     
+    NSLog(@"%@", userId);
+    
     //发送网络请求
-    [[LPTJsonHttpClient sharedClient] postPath:@"/app/getAttendingMeetingsList" parameters:params
+    [[LPTJsonHttpClient sharedClient] getPath:@"/app/getMyAttendingMeetings" parameters:params
                                        success:^(AFHTTPRequestOperation *operation, id responseJSON) {
                                            NSLog(@"getAttendingMeetingsList Success");
                                            //提取数据
@@ -51,8 +54,40 @@
                                            [controller.tableView reloadData];
                                            
                                        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                           NSLog(@"Failed");
+                                           NSLog(@"getAttendingMeetingsList Failed:%@",error);
                                        }];
 };
+
+- (void)getFoundedMeetingsList:(NSNumber *) userId controller:(LPTFoundedMeetingsViewController *)controller
+{
+    controller.meetings = [[NSMutableArray alloc] init];
+    
+    //组装变量
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:userId forKey:@"userId"];
+    
+    NSLog(@"%@", userId);
+    
+    //发送网络请求
+    [[LPTJsonHttpClient sharedClient] getPath:@"/app/getMyFoundedMeetings" parameters:params
+                                      success:^(AFHTTPRequestOperation *operation, id responseJSON) {
+                                          NSLog(@"getMyFoundedMeetings Success");
+                                          NSLog(@"%@",responseJSON);
+                                          //提取数据
+                                          NSString *isSuccessStr = [responseJSON valueForKeyPath:@"isSuccess"];
+                                          id data = [responseJSON objectForKey:@"data"];
+                                          
+                                          NSLog(@"%i", [data count]);
+                                          //组装数据
+                                          for (NSUInteger index=0; index<[data count]; index++) {
+                                              Meeting *meeting = [[Meeting alloc] initWithJson:[data objectAtIndex:index]];
+                                              [controller.meetings addObject:meeting];
+                                          }
+                                          [controller.tableView reloadData];
+                                          
+                                      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                          NSLog(@"getMyFoundedMeetings Failed:%@",error);
+                                      }];
+}
 
 @end
