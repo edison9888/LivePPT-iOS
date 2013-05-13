@@ -24,7 +24,7 @@
     [params setObject:userId forKey:@"userId"];
     
     //发送网络请求
-    [[LPTJsonHttpClient sharedClient] postPath:@"/app/getPptList" parameters:params
+    [[LPTJsonHttpClient sharedClient] getPath:@"/app/getPptList" parameters:params
                                        success:^(AFHTTPRequestOperation *operation, id responseJSON) {
                                            NSLog(@"LoginSuccess");
                                            //提取数据
