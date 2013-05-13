@@ -8,6 +8,7 @@
 
 #import "LPTLiveWatchingMeetingViewController.h"
 
+#import "NetworkProperty.h"
 #import "UIImageView+AFNetworking.h"
 #import "SRWebSocket.h"
 
@@ -16,8 +17,6 @@
 @end
 
 @implementation LPTLiveWatchingMeetingViewController
-
-static NSString *IMG_BASE_URL = @"http://192.168.1.103:9000/getpptpage";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,6 +50,7 @@ static NSString *IMG_BASE_URL = @"http://192.168.1.103:9000/getpptpage";
 
 -(void) setPageImgWithIndex:(NSNumber *)pageIndex
 {
+    NSString *IMG_BASE_URL = [[NSString alloc] initWithFormat:@"%@%@", [NetworkProperty getHttpBaseUrlStr], @"/getpptpage"];
     NSString *urlStr = [[NSString alloc] initWithFormat:@"%@?pptid=%@&pageid=%@",IMG_BASE_URL,self.meeting.ppt.pptId, pageIndex];
     NSLog(@"img:%@",urlStr);
     NSURL *url = [NSURL URLWithString:urlStr];
