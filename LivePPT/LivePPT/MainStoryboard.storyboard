@@ -118,15 +118,15 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="EeX-gu-Oc5" kind="relationship" relationship="viewControllers" id="LIa-lf-ZnT"/>
-                        <segue destination="GOo-9c-81u" kind="relationship" relationship="viewControllers" id="3Mp-H6-lCc"/>
-                        <segue destination="Fac-bs-SWW" kind="relationship" relationship="viewControllers" id="t55-Pa-Qw7"/>
-                        <segue destination="Mo4-ex-YeI" kind="relationship" relationship="viewControllers" id="f7j-hH-h4w"/>
+                        <segue destination="EeX-gu-Oc5" kind="relationship" relationship="viewControllers" id="J8L-lU-P48"/>
+                        <segue destination="Fac-bs-SWW" kind="relationship" relationship="viewControllers" id="Er0-uG-4Xr"/>
+                        <segue destination="Mo4-ex-YeI" kind="relationship" relationship="viewControllers" id="hXB-W5-xY0"/>
+                        <segue destination="GOo-9c-81u" kind="relationship" relationship="viewControllers" id="BiT-WV-lgI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ul1-yU-cwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-901" y="-279"/>
+            <point key="canvasLocation" x="-861" y="-345"/>
         </scene>
         <!--Ppt View Controller - MyPPT-->
         <scene sceneID="nLz-cb-1Nx">
@@ -253,7 +253,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="17S-j2-zLk" secondAttribute="trailing" constant="20" type="default" id="OMC-9q-xiM"/>
                                             <constraint firstItem="17S-j2-zLk" firstAttribute="leading" secondItem="c0U-DZ-OnQ" secondAttribute="leading" constant="20" type="default" id="UMm-SD-nbz"/>
-                                            <constraint firstItem="17S-j2-zLk" firstAttribute="top" secondItem="c0U-DZ-OnQ" secondAttribute="top" type="default" id="s9u-Cd-3yt"/>
+                                            <constraint firstItem="17S-j2-zLk" firstAttribute="top" secondItem="c0U-DZ-OnQ" secondAttribute="top" constant="-1" id="cX1-Hi-1Nw"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -411,7 +411,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="l4o-bL-pra" firstAttribute="top" secondItem="czg-VI-aKn" secondAttribute="top" type="default" id="PiQ-0a-A59"/>
+                                            <constraint firstItem="l4o-bL-pra" firstAttribute="top" secondItem="czg-VI-aKn" secondAttribute="top" constant="-1" id="LSz-km-x5v"/>
                                             <constraint firstAttribute="trailing" secondItem="l4o-bL-pra" secondAttribute="trailing" constant="20" type="default" id="cSv-Jl-Ey7"/>
                                             <constraint firstItem="l4o-bL-pra" firstAttribute="leading" secondItem="czg-VI-aKn" secondAttribute="leading" constant="20" type="default" id="dxM-bw-Kft"/>
                                         </constraints>
@@ -684,6 +684,75 @@
     <resources>
         <image name="icon.png" width="242" height="244"/>
     </resources>
+    <classes>
+        <class className="LPTAttendingMeetingDetailsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTAttendingMeetingDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnEnterLiveWatchingMeetingPressed:"/>
+                <relationship kind="outlet" name="meetingTopicLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LPTAttendingMeetingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTAttendingMeetingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="selectLeftAction:"/>
+            </relationships>
+        </class>
+        <class className="LPTControlMeetingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTControlMeetingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnNextPagePressed:"/>
+                <relationship kind="action" name="btnPrePagePressed:"/>
+                <relationship kind="outlet" name="currentPageImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="LPTFoundedMeetingDetailsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTFoundedMeetingDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnEnterControlMeetingPressed:"/>
+                <relationship kind="outlet" name="topicLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LPTFoundedMeetingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTFoundedMeetingsViewController.h"/>
+        </class>
+        <class className="LPTLiveWatchingMeetingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTLiveWatchingMeetingViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="currentPageImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="LPTLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonPressed:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="outlet" name="emailInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordInput" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="LPTMoreViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTMoreViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logoutButtonPressed:"/>
+                <relationship kind="outlet" name="emailLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LPTPptDetailsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTPptDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="fileSizeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="uploadTimeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LPTPptViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTPptViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
