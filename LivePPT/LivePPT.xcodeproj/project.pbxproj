@@ -11,6 +11,7 @@
 		12048FCC174D4D8900BC8AED /* icon-tab-myFoundedMeeting.png in Resources */ = {isa = PBXBuildFile; fileRef = 12048FC9174D4D8900BC8AED /* icon-tab-myFoundedMeeting.png */; };
 		12048FCD174D4D8900BC8AED /* icon-tab-myPpt.png in Resources */ = {isa = PBXBuildFile; fileRef = 12048FCA174D4D8900BC8AED /* icon-tab-myPpt.png */; };
 		12048FD0174D4F9E00BC8AED /* JsonResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 12048FCF174D4F9E00BC8AED /* JsonResult.m */; };
+		12048FD3174D5A1D00BC8AED /* PptImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12048FD2174D5A1D00BC8AED /* PptImageController.m */; };
 		12124CFD17352CD7009C22F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12124CFC17352CD7009C22F2 /* UIKit.framework */; };
 		12124CFF17352CD7009C22F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12124CFE17352CD7009C22F2 /* Foundation.framework */; };
 		12124D0117352CD7009C22F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12124D0017352CD7009C22F2 /* CoreGraphics.framework */; };
@@ -59,6 +60,8 @@
 		12048FCA174D4D8900BC8AED /* icon-tab-myPpt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-tab-myPpt.png"; sourceTree = "<group>"; };
 		12048FCE174D4F9E00BC8AED /* JsonResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JsonResult.h; path = Models/JsonResult.h; sourceTree = "<group>"; };
 		12048FCF174D4F9E00BC8AED /* JsonResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JsonResult.m; path = Models/JsonResult.m; sourceTree = "<group>"; };
+		12048FD1174D5A1D00BC8AED /* PptImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PptImageController.h; path = Models/PptImageController.h; sourceTree = "<group>"; };
+		12048FD2174D5A1D00BC8AED /* PptImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PptImageController.m; path = Models/PptImageController.m; sourceTree = "<group>"; };
 		12124CF917352CD7009C22F2 /* LivePPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivePPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12124CFC17352CD7009C22F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		12124CFE17352CD7009C22F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -258,6 +261,8 @@
 				12D65D06173BB68900CE6CF0 /* NetworkProperty.m */,
 				12048FCE174D4F9E00BC8AED /* JsonResult.h */,
 				12048FCF174D4F9E00BC8AED /* JsonResult.m */,
+				12048FD1174D5A1D00BC8AED /* PptImageController.h */,
+				12048FD2174D5A1D00BC8AED /* PptImageController.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -420,6 +425,7 @@
 				12640146174160670039589D /* LPTFoundedMeetingDetailsViewController.m in Sources */,
 				12640149174164930039589D /* LPTControlMeetingViewController.m in Sources */,
 				12048FD0174D4F9E00BC8AED /* JsonResult.m in Sources */,
+				12048FD3174D5A1D00BC8AED /* PptImageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

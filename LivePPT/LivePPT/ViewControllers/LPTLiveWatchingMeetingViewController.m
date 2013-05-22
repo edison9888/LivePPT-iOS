@@ -9,6 +9,7 @@
 #import "LPTLiveWatchingMeetingViewController.h"
 
 #import "NetworkProperty.h"
+#import "PptImageController.h"
 #import "UIImageView+AFNetworking.h"
 #import "SRWebSocket.h"
 
@@ -31,10 +32,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self setPageImgWithIndex:[[NSNumber alloc] initWithInt:1]];
+//    [self setPageImgWithIndex:[[NSNumber alloc] initWithInt:1]];
+    self.pptImageController = [[PptImageController alloc] init];
     
     self.ws = [[LPTLiveWatchingWebSocket alloc] initWithDelegate:self];
     [self.ws open];
+    
+    [self setPageImgWithIndex:1];
 }
 
 -(void) viewWillDisappear:(BOOL)animated
@@ -54,13 +58,16 @@
     self.meeting = meeting;
 }
 
--(void) setPageImgWithIndex:(NSNumber *)pageIndex
+-(void) setPageImgWithIndex:(NSUInteger)pageIndex
 {
+    [self.currentPageImageView  setImage:[self.pptImageController getPptImageWithPpt:self.meeting.ppt pageIndex:pageIndex]];
+    /*
     NSString *IMG_BASE_URL = [[NSString alloc] initWithFormat:@"%@%@", [NetworkProperty getHttpBaseUrlStr], @"/getpptpage"];
     NSString *urlStr = [[NSString alloc] initWithFormat:@"%@?pptid=%@&pageid=%@",IMG_BASE_URL,self.meeting.ppt.pptId, pageIndex];
     NSLog(@"img:%@",urlStr);
     NSURL *url = [NSURL URLWithString:urlStr];
     [self.currentPageImageView setImageWithURL:url];
+     */
 }
 
 
@@ -74,7 +81,7 @@
 {
     NSLog(@"WS mess recieved:%@", message);
     NSArray *splitedMess = [message componentsSeparatedByString:@"-"];
-    NSNumber *pageIndex = [[NSNumber alloc] initWithInt:[splitedMess[1] intValue]];
+    NSUInteger pageIndex = [splitedMess[1] intValue];
     [self setPageImgWithIndex:pageIndex];
 }
 

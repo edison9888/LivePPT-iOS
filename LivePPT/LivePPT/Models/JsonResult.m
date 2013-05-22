@@ -10,7 +10,7 @@
 
 @implementation JsonResult
 
--(JsonResult *) initWithResponseJson:(id) responseJSON
+-(id) initWithResponseJson:(id) responseJSON
 {
     self = [super init];
     

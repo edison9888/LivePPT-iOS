@@ -15,6 +15,6 @@
 @property NSString *message;
 @property id dataJson;
 
--(JsonResult *) initWithResponseJson:(id) responseJSON;
+-(id) initWithResponseJson:(id) responseJSON;
 
 @end

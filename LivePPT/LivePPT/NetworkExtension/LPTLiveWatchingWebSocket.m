@@ -15,7 +15,7 @@
 -(id) initWithDelegate:aDelegate{
     NSString *LIVE_WATCHING_WS_ADDRESS = [[NSString alloc] initWithFormat:@"%@/viewWebsocket", [NetworkProperty getWSBaseUrlStr]];
         
-    LIVE_WATCHING_WS_ADDRESS = @"ws://live-ppt.com:9000/viewWebsocket";
+//    LIVE_WATCHING_WS_ADDRESS = @"ws://live-ppt.com:9000/viewWebsocket";
     
     NSLog(LIVE_WATCHING_WS_ADDRESS);
     

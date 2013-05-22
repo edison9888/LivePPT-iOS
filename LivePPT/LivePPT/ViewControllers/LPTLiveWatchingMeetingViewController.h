@@ -10,12 +10,13 @@
 
 #import "LPTLiveWatchingWebSocket.h"
 #import "Meeting.h"
+#import "PptImageController.h"
 #import "SRWebSocket.h"
 
 @interface LPTLiveWatchingMeetingViewController : UIViewController<SRWebSocketDelegate>
 
 @property Meeting *meeting;
-
+@property PptImageController *pptImageController;
 @property LPTLiveWatchingWebSocket *ws;
 
 @property (weak, nonatomic) IBOutlet UIImageView *currentPageImageView;
