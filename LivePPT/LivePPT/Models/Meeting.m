@@ -8,6 +8,7 @@
 
 #import "Meeting.h"
 
+#import "JsonResult.h"
 #import "LPTAttendingMeetingsViewController.h"
 #import "LPTFoundedMeetingsViewController.h"
 #import "LPTJsonHttpClient.h"
@@ -42,16 +43,22 @@
                                        success:^(AFHTTPRequestOperation *operation, id responseJSON) {
                                            NSLog(@"getAttendingMeetingsList Success");
                                            //提取数据
-                                           NSString *isSuccessStr = [responseJSON valueForKeyPath:@"isSuccess"];
-                                           id data = [responseJSON objectForKey:@"data"];
+                                           JsonResult *responseResult = [[JsonResult alloc] initWithResponseJson:responseJSON];
                                            
-                                           NSLog(@"%i", [data count]);
-                                           //组装数据
-                                           for (NSUInteger index=0; index<[data count]; index++) {
-                                               Meeting *meeting = [[Meeting alloc] initWithJson:[data objectAtIndex:index]];
-                                               [controller.meetings addObject:meeting];
+                                           if (responseResult.isSuccess) {
+                                               id data = responseResult.dataJson;
+                                               NSLog(@"%i", [data count]);
+                                               //组装数据
+                                               for (NSUInteger index=0; index<[data count]; index++) {
+                                                   Meeting *meeting = [[Meeting alloc] initWithJson:[data objectAtIndex:index]];
+                                                   [controller.meetings addObject:meeting];
+                                               }
+                                               [controller.tableView reloadData];
+                                           } else {
+                                               
                                            }
-                                           [controller.tableView reloadData];
+                                           
+                                           
                                            
                                        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                            NSLog(@"getAttendingMeetingsList Failed:%@",error);
@@ -74,16 +81,22 @@
                                           NSLog(@"getMyFoundedMeetings Success");
                                           NSLog(@"%@",responseJSON);
                                           //提取数据
-                                          NSString *isSuccessStr = [responseJSON valueForKeyPath:@"isSuccess"];
-                                          id data = [responseJSON objectForKey:@"data"];
+                                          JsonResult *responseResult = [[JsonResult alloc] initWithResponseJson:responseJSON];
                                           
-                                          NSLog(@"%i", [data count]);
-                                          //组装数据
-                                          for (NSUInteger index=0; index<[data count]; index++) {
-                                              Meeting *meeting = [[Meeting alloc] initWithJson:[data objectAtIndex:index]];
-                                              [controller.meetings addObject:meeting];
+                                          if (responseResult.isSuccess) {
+                                              id data = responseResult.dataJson;
+                                              NSLog(@"%i", [data count]);
+                                              //组装数据
+                                              for (NSUInteger index=0; index<[data count]; index++) {
+                                                  Meeting *meeting = [[Meeting alloc] initWithJson:[data objectAtIndex:index]];
+                                                  [controller.meetings addObject:meeting];
+                                              }
+                                              [controller.tableView reloadData];
+                                          } else {
+                                              
                                           }
-                                          [controller.tableView reloadData];
+                                          
+                                          
                                           
                                       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                           NSLog(@"getMyFoundedMeetings Failed:%@",error);

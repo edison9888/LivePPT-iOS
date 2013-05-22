@@ -8,6 +8,7 @@
 
 #import "PptController.h"
 
+#import "JsonResult.h"
 #import "LPTJsonHttpClient.h"
 #import "Ppt.h"
 #import "LPTPptViewController.h"
@@ -26,14 +27,14 @@
     //发送网络请求
     [[LPTJsonHttpClient sharedClient] getPath:@"/app/getPptList" parameters:params
                                        success:^(AFHTTPRequestOperation *operation, id responseJSON) {
-                                           NSLog(@"LoginSuccess");
+                                           NSLog(@"getPptList Success");
                                            NSLog(@"%@", userId);
                                            //提取数据
-                                           NSInteger isSuccess = [responseJSON valueForKeyPath:@"isSuccess"];
+                                           JsonResult *responseResult = [[JsonResult alloc] initWithResponseJson:responseJSON];
                                            
-                                           if (isSuccess==1){
+                                           if (responseResult.isSuccess){
                                                
-                                               id data = [responseJSON objectForKey:@"data"];
+                                               id data = responseResult.dataJson;
                                                
                                                NSLog(@"%i", [data count]);
                                                //组装数据
@@ -45,7 +46,7 @@
                                            }
                                            
                                        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                           NSLog(@"Failed");
+                                           NSLog(@" getPptList Failed");
                                        }];
 };
 
