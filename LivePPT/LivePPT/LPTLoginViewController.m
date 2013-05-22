@@ -8,6 +8,7 @@
 
 #import "LPTLoginViewController.h"
 
+#import "JsonResult.h"
 #import "LPTJsonHttpClient.h"
 #import "UserLoginInfo.h"
 
@@ -83,13 +84,13 @@
     [[LPTJsonHttpClient sharedClient] getPath:@"/app/login" parameters:params
                                       success:^(AFHTTPRequestOperation *operation, id responseJSON) {
                                           NSLog(@"LoginSuccess");
-                                          NSNumber *isSuccess = [responseJSON valueForKeyPath:@"isSuccess"];
-                                          NSNumber *statusCode = [responseJSON valueForKeyPath:@"statusCode"];
-                                          if ([isSuccess intValue]==1){
+                                          JsonResult *responseResult = [[JsonResult alloc] initWithResponseJson:responseJSON];
+                                          
+                                          if (responseResult.isSuccess){
                                               //登录成功
                                               
                                               //取出data
-                                              id data = [responseJSON objectForKey:@"data"];
+                                              id data = responseResult.dataJson;
                                               
                                               //在本地持久化登录信息
                                               [self saveLoginInfo:data];
@@ -103,7 +104,7 @@
                                               NSString *messageContent;
                                               messageContent = [[NSString alloc] initWithString:[responseJSON valueForKeyPath:@"message"]];
                                               
-                                              switch ([statusCode intValue]) {
+                                              switch (responseResult.statusCode) {
                                                   case 1100:
                                                       messageContent = @"账号/密码不配对";
                                                       break;
