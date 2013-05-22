@@ -80,42 +80,67 @@
     [params setObject:passwordStr forKey:@"password"];
     
     //发出POST请求
-    [[LPTJsonHttpClient sharedClient] postPath:@"/app/login" parameters:params
-                                       success:^(AFHTTPRequestOperation *operation, id responseJSON) {
-                                           NSLog(@"LoginSuccess");
-                                           NSNumber *isSuccessStr = [responseJSON valueForKeyPath:@"isSuccess"];
-                                           id data = [responseJSON objectForKey:@"data"];
-                                           if ([isSuccessStr isEqualToNumber:[[NSNumber alloc] initWithInt:1]]){
-                                               //登录成功
-                                               //在本地持久化登录信息
-                                               [self saveLoginInfo:data];
-                                               UserLoginInfo *loginInfo = [UserLoginInfo getInfo];
-                                               NSLog(@"LoginInfo Saved:[UserId:%@, Email:%@, DisplayName:%@]",[loginInfo.userId stringValue], loginInfo.email, loginInfo.displayName);
-                                               //触发Segue跳转至Tab
-                                               [self performSegueWithIdentifier:@"ShowTabSegue" sender:self];
-                                           } else {
-                                               //登录失败
-                                               //显示错误信息AlertView
-                                               UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败" message:[data valueForKeyPath:@"message"] delegate:self cancelButtonTitle:@"明白" otherButtonTitles:nil];
-                                               [alertView show];
-                                           }
-                                       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                           NSLog(@"LoginFailed");
-                                           //登录失败，显示错误信息AlertView
-                                           UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败" message:@"请检查手机的网络连接。" delegate:self cancelButtonTitle:@"明白" otherButtonTitles:nil];
-                                           [alertView show];
-                                       }];
+    [[LPTJsonHttpClient sharedClient] getPath:@"/app/login" parameters:params
+                                      success:^(AFHTTPRequestOperation *operation, id responseJSON) {
+                                          NSLog(@"LoginSuccess");
+                                          NSNumber *isSuccess = [responseJSON valueForKeyPath:@"isSuccess"];
+                                          NSNumber *statusCode = [responseJSON valueForKeyPath:@"statusCode"];
+                                          if ([isSuccess intValue]==1){
+                                              //登录成功
+                                              
+                                              //取出data
+                                              id data = [responseJSON objectForKey:@"data"];
+                                              
+                                              //在本地持久化登录信息
+                                              [self saveLoginInfo:data];
+                                              UserLoginInfo *loginInfo = [UserLoginInfo getInfo];
+                                              NSLog(@"LoginInfo Saved:[UserId:%@, Email:%@, DisplayName:%@]",[loginInfo.userId stringValue], loginInfo.email, loginInfo.displayName);
+                                              //触发Segue跳转至Tab
+                                              [self performSegueWithIdentifier:@"ShowTabSegue" sender:self];
+                                          } else {
+                                              //登录失败
+                                              
+                                              NSString *messageContent;
+                                              messageContent = [[NSString alloc] initWithString:[responseJSON valueForKeyPath:@"message"]];
+                                              
+                                              switch ([statusCode intValue]) {
+                                                  case 1100:
+                                                      messageContent = @"账号/密码不配对";
+                                                      break;
+                                                  case 1101:
+                                                      messageContent = @"不存在该用户";
+                                                      break;
+                                                default:
+                                                      messageContent = @"未知错误";
+                                              }
+                                              
+                                              //显示错误信息AlertView
+                                              [self showLoginErrorAlertViewWithMessage:messageContent];
+                                          }
+                                      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                          NSLog(@"LoginFailed:%@",error);
+                                          //登录失败，显示错误信息AlertView
+                                          [self showLoginErrorAlertViewWithMessage:@"请检查网络连接"];
+                                          
+                                      }];
 }
 
 // //////////////
 //For Private Use
 -(void) saveLoginInfo:(id) userData
 {
-    UserLoginInfo *loginInfo = [[UserLoginInfo alloc] init];    
+    UserLoginInfo *loginInfo = [[UserLoginInfo alloc] init];
     loginInfo.userId = [userData valueForKeyPath:@"userId"];
     loginInfo.email = [userData valueForKeyPath:@"email"];
     loginInfo.displayName = [userData valueForKeyPath:@"displayName"];
     [UserLoginInfo saveInfo:loginInfo];
+}
+
+
+-(void) showLoginErrorAlertViewWithMessage:(NSString*)aMessage
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录未成功" message:aMessage delegate:self cancelButtonTitle:@"明白" otherButtonTitles:nil];
+    [alertView show];
 }
 
 
