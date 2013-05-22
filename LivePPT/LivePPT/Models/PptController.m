@@ -27,17 +27,22 @@
     [[LPTJsonHttpClient sharedClient] getPath:@"/app/getPptList" parameters:params
                                        success:^(AFHTTPRequestOperation *operation, id responseJSON) {
                                            NSLog(@"LoginSuccess");
+                                           NSLog(@"%@", userId);
                                            //提取数据
-                                           NSString *isSuccessStr = [responseJSON valueForKeyPath:@"isSuccess"];
-                                           id data = [responseJSON objectForKey:@"data"];
+                                           NSInteger isSuccess = [responseJSON valueForKeyPath:@"isSuccess"];
                                            
-                                           NSLog(@"%i", [data count]);
-                                           //组装数据
-                                           for (NSUInteger index=0; index<[data count]; index++) {
-                                               Ppt *ppt = [[Ppt alloc] initWithJson:[data objectAtIndex:index]];
-                                               [controller.pptArray addObject:ppt];
+                                           if (isSuccess==1){
+                                               
+                                               id data = [responseJSON objectForKey:@"data"];
+                                               
+                                               NSLog(@"%i", [data count]);
+                                               //组装数据
+                                               for (NSUInteger index=0; index<[data count]; index++) {
+                                                   Ppt *ppt = [[Ppt alloc] initWithJson:[data objectAtIndex:index]];
+                                                   [controller.pptArray addObject:ppt];
+                                               }
+                                               [controller.tableView reloadData];
                                            }
-                                           [controller.tableView reloadData];
                                            
                                        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                            NSLog(@"Failed");

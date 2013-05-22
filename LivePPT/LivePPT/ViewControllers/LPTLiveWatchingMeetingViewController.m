@@ -37,6 +37,12 @@
     [self.ws open];
 }
 
+-(void) viewWillDisappear:(BOOL)animated
+{
+    //关闭WebSocket
+    [self.ws close];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

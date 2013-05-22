@@ -694,9 +694,6 @@
         </class>
         <class className="LPTAttendingMeetingsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTAttendingMeetingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="selectLeftAction:"/>
-            </relationships>
         </class>
         <class className="LPTControlMeetingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTControlMeetingViewController.h"/>
