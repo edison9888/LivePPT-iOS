@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12048FCB174D4D8900BC8AED /* icon-tab-myAttendingMeeting.png in Resources */ = {isa = PBXBuildFile; fileRef = 12048FC8174D4D8900BC8AED /* icon-tab-myAttendingMeeting.png */; };
+		12048FCC174D4D8900BC8AED /* icon-tab-myFoundedMeeting.png in Resources */ = {isa = PBXBuildFile; fileRef = 12048FC9174D4D8900BC8AED /* icon-tab-myFoundedMeeting.png */; };
+		12048FCD174D4D8900BC8AED /* icon-tab-myPpt.png in Resources */ = {isa = PBXBuildFile; fileRef = 12048FCA174D4D8900BC8AED /* icon-tab-myPpt.png */; };
+		12048FD0174D4F9E00BC8AED /* JsonResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 12048FCF174D4F9E00BC8AED /* JsonResult.m */; };
 		12124CFD17352CD7009C22F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12124CFC17352CD7009C22F2 /* UIKit.framework */; };
 		12124CFF17352CD7009C22F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12124CFE17352CD7009C22F2 /* Foundation.framework */; };
 		12124D0117352CD7009C22F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12124D0017352CD7009C22F2 /* CoreGraphics.framework */; };
@@ -50,6 +54,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12048FC8174D4D8900BC8AED /* icon-tab-myAttendingMeeting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-tab-myAttendingMeeting.png"; sourceTree = "<group>"; };
+		12048FC9174D4D8900BC8AED /* icon-tab-myFoundedMeeting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-tab-myFoundedMeeting.png"; sourceTree = "<group>"; };
+		12048FCA174D4D8900BC8AED /* icon-tab-myPpt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-tab-myPpt.png"; sourceTree = "<group>"; };
+		12048FCE174D4F9E00BC8AED /* JsonResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JsonResult.h; path = Models/JsonResult.h; sourceTree = "<group>"; };
+		12048FCF174D4F9E00BC8AED /* JsonResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JsonResult.m; path = Models/JsonResult.m; sourceTree = "<group>"; };
 		12124CF917352CD7009C22F2 /* LivePPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivePPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12124CFC17352CD7009C22F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		12124CFE17352CD7009C22F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -134,6 +143,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12048FC7174D4D8900BC8AED /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				12048FC8174D4D8900BC8AED /* icon-tab-myAttendingMeeting.png */,
+				12048FC9174D4D8900BC8AED /* icon-tab-myFoundedMeeting.png */,
+				12048FCA174D4D8900BC8AED /* icon-tab-myPpt.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
 		12124CF017352CD7009C22F2 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +191,7 @@
 		12124D0417352CD7009C22F2 /* LivePPT */ = {
 			isa = PBXGroup;
 			children = (
+				12048FC7174D4D8900BC8AED /* icons */,
 				12570E821736B32700207229 /* ViewControllers */,
 				12570E7B1736542900207229 /* Models */,
 				12570E6D1735EEC800207229 /* NetworkExtension */,
@@ -236,6 +256,8 @@
 				12B784921739A00200C7764F /* Meeting.m */,
 				12D65D05173BB68900CE6CF0 /* NetworkProperty.h */,
 				12D65D06173BB68900CE6CF0 /* NetworkProperty.m */,
+				12048FCE174D4F9E00BC8AED /* JsonResult.h */,
+				12048FCF174D4F9E00BC8AED /* JsonResult.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -332,6 +354,9 @@
 				12570E7817363DD600207229 /* icon_54.png in Resources */,
 				12570E7A17363DDE00207229 /* icon_114.png in Resources */,
 				12D65D11173BBE6500CE6CF0 /* NetworkProperty.plist in Resources */,
+				12048FCB174D4D8900BC8AED /* icon-tab-myAttendingMeeting.png in Resources */,
+				12048FCC174D4D8900BC8AED /* icon-tab-myFoundedMeeting.png in Resources */,
+				12048FCD174D4D8900BC8AED /* icon-tab-myPpt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +419,7 @@
 				1264014317413AB50039589D /* LPTFoundedMeetingsViewController.m in Sources */,
 				12640146174160670039589D /* LPTFoundedMeetingDetailsViewController.m in Sources */,
 				12640149174164930039589D /* LPTControlMeetingViewController.m in Sources */,
+				12048FD0174D4F9E00BC8AED /* JsonResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

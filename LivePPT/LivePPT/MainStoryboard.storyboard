@@ -305,7 +305,7 @@
         <scene sceneID="e0C-WV-twh">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Fac-bs-SWW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="观看会议" id="tjG-aH-Oub"/>
+                    <tabBarItem key="tabBarItem" title="观看会议" image="icon-tab-myAttendingMeeting.png" id="tjG-aH-Oub"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vq1-uX-GKp">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -434,11 +434,11 @@
             </objects>
             <point key="canvasLocation" x="1341" y="408"/>
         </scene>
-        <!--Navigation Controller - 发起会议-->
+        <!--Navigation Controller - 主持会议-->
         <scene sceneID="wDX-fb-0De">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Mo4-ex-YeI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="发起会议" id="wIp-3f-YNk"/>
+                    <tabBarItem key="tabBarItem" title="主持会议" image="icon-tab-myFoundedMeeting.png" id="wIp-3f-YNk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rvg-CS-Jzd">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -547,7 +547,7 @@
         <scene sceneID="iU2-Yg-DRc">
             <objects>
                 <navigationController definesPresentationContext="YES" id="EeX-gu-Oc5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的PPT" id="fdl-J3-fOt"/>
+                    <tabBarItem key="tabBarItem" title="我的PPT" image="icon-tab-myPpt.png" id="fdl-J3-fOt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="467-nw-tZ2">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -682,6 +682,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-tab-myAttendingMeeting.png" width="30" height="30"/>
+        <image name="icon-tab-myFoundedMeeting.png" width="30" height="30"/>
+        <image name="icon-tab-myPpt.png" width="30" height="30"/>
         <image name="icon.png" width="242" height="244"/>
     </resources>
     <classes>
