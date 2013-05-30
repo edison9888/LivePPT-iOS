@@ -697,6 +697,9 @@
         </class>
         <class className="LPTAttendingMeetingsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTAttendingMeetingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="selectLeftAction:"/>
+            </relationships>
         </class>
         <class className="LPTControlMeetingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTControlMeetingViewController.h"/>
@@ -715,6 +718,9 @@
         </class>
         <class className="LPTFoundedMeetingsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTFoundedMeetingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="selectLeftAction:"/>
+            </relationships>
         </class>
         <class className="LPTLiveWatchingMeetingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTLiveWatchingMeetingViewController.h"/>
@@ -748,6 +754,9 @@
         </class>
         <class className="LPTPptViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTPptViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="selectLeftAction:"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

@@ -13,7 +13,7 @@
 @interface LPTControlMeetingViewController : UIViewController
 
 @property Meeting *meeting;
-@property NSInteger currentPageIndex;
+@property NSUInteger currentPageIndex;
 @property NSNumber *maxPageIndex;
 
 @property (strong, nonatomic) IBOutlet UIImageView *currentPageImageView;

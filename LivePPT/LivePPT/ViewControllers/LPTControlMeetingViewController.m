@@ -32,6 +32,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self setPageImgWithIndex:1];
+
+    //显示Toolbar
     self.navigationController.toolbarHidden=NO;
 }
 
@@ -68,7 +70,7 @@
     self.maxPageIndex = meeting.ppt.pageCount;
 }
 
--(void) setPageImgWithIndex:(NSInteger *)pageIndex
+-(void) setPageImgWithIndex:(NSUInteger *)pageIndex
 {
     NSString *IMG_BASE_URL = [[NSString alloc] initWithFormat:@"%@%@", [NetworkProperty getHttpBaseUrlStr], @"/getpptpage"];
     NSString *urlStr = [[NSString alloc] initWithFormat:@"%@?pptid=%@&pageid=%i",IMG_BASE_URL,self.meeting.ppt.pptId, pageIndex];
@@ -78,13 +80,19 @@
     self.currentPageIndex = pageIndex;
 }
 
--(void) setRemoteMeetingPageIndex:(NSInteger *)pageIndex
+-(void) setRemoteMeetingPageIndex:(NSUInteger *)pageIndex
 {
+    //组装变量
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:self.meeting.meetingId forKey:@"meetingId"];
+    [params setObject:[[NSNumber alloc] initWithInteger:pageIndex] forKey:@"pageIndex"];
     
-    NSString *urlStr = [[NSString alloc] initWithFormat:@"/app/setMeetingPageIndex/%@/%i", self.meeting.meetingId, self.currentPageIndex];
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"/app/setMeetingPageIndex", self.meeting.meetingId, self.currentPageIndex];
+    
+    NSLog(@"setting remote pageIndex:%i", pageIndex);
     
     //发送网络请求
-    [[LPTJsonHttpClient sharedClient] postPath:urlStr parameters:NULL
+    [[LPTJsonHttpClient sharedClient] postPath:urlStr parameters:params
                                       success:^(AFHTTPRequestOperation *operation, id responseJSON) {
                                           NSLog(@"setMeetingPageIndex Success:%@", responseJSON);
                                       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

@@ -38,13 +38,13 @@
     self.ws = [[LPTLiveWatchingWebSocket alloc] initWithDelegate:self];
     [self.ws open];
     
-    [self setPageImgWithIndex:1];
+//    [self setPageImgWithIndex:1];
 }
 
 -(void) viewWillDisappear:(BOOL)animated
 {
     //关闭WebSocket
-    [self.ws close];
+//    [self.ws close];
 }
 
 - (void)didReceiveMemoryWarning

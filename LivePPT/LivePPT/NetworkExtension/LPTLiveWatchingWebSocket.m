@@ -12,7 +12,7 @@
 
 @implementation LPTLiveWatchingWebSocket
 
--(id) initWithDelegate:aDelegate{
+-(id) initWithDelegate:(id)aDelegate{
     NSString *LIVE_WATCHING_WS_ADDRESS = [[NSString alloc] initWithFormat:@"%@/viewWebsocket", [NetworkProperty getWSBaseUrlStr]];
         
 //    LIVE_WATCHING_WS_ADDRESS = @"ws://live-ppt.com:9000/viewWebsocket";
