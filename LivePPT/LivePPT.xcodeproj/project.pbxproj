@@ -40,6 +40,12 @@
 		1264014317413AB50039589D /* LPTFoundedMeetingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264014217413AB50039589D /* LPTFoundedMeetingsViewController.m */; };
 		12640146174160670039589D /* LPTFoundedMeetingDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12640145174160670039589D /* LPTFoundedMeetingDetailsViewController.m */; };
 		12640149174164930039589D /* LPTControlMeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12640148174164930039589D /* LPTControlMeetingViewController.m */; };
+		12A782681757832C00DD5E0A /* lauch_640_1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A782651757832C00DD5E0A /* lauch_640_1136.png */; };
+		12A782691757832C00DD5E0A /* launch_320_480.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A782661757832C00DD5E0A /* launch_320_480.png */; };
+		12A7826A1757832C00DD5E0A /* launch_640_960.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A782671757832C00DD5E0A /* launch_640_960.png */; };
+		12A7826C1757834200DD5E0A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A7826B1757834200DD5E0A /* Default.png */; };
+		12A7826E1757834C00DD5E0A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A7826D1757834C00DD5E0A /* Default@2x.png */; };
+		12A782701757836200DD5E0A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A7826F1757836200DD5E0A /* Default-568h@2x.png */; };
 		12B7849017399EF400C7764F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B7848F17399EF400C7764F /* User.m */; };
 		12B784931739A00200C7764F /* Meeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B784921739A00200C7764F /* Meeting.m */; };
 		12B784961739A1F900C7764F /* LPTAttendingMeetingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B784951739A1F900C7764F /* LPTAttendingMeetingsViewController.m */; };
@@ -102,6 +108,12 @@
 		12640145174160670039589D /* LPTFoundedMeetingDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPTFoundedMeetingDetailsViewController.m; path = ViewControllers/LPTFoundedMeetingDetailsViewController.m; sourceTree = "<group>"; };
 		12640147174164930039589D /* LPTControlMeetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPTControlMeetingViewController.h; path = ViewControllers/LPTControlMeetingViewController.h; sourceTree = "<group>"; };
 		12640148174164930039589D /* LPTControlMeetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPTControlMeetingViewController.m; path = ViewControllers/LPTControlMeetingViewController.m; sourceTree = "<group>"; };
+		12A782651757832C00DD5E0A /* lauch_640_1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lauch_640_1136.png; sourceTree = "<group>"; };
+		12A782661757832C00DD5E0A /* launch_320_480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_320_480.png; sourceTree = "<group>"; };
+		12A782671757832C00DD5E0A /* launch_640_960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_640_960.png; sourceTree = "<group>"; };
+		12A7826B1757834200DD5E0A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		12A7826D1757834C00DD5E0A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		12A7826F1757836200DD5E0A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		12B7848E17399EF400C7764F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Models/User.h; sourceTree = "<group>"; };
 		12B7848F17399EF400C7764F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Models/User.m; sourceTree = "<group>"; };
 		12B784911739A00200C7764F /* Meeting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Meeting.h; path = Models/Meeting.h; sourceTree = "<group>"; };
@@ -149,6 +161,9 @@
 		12048FC7174D4D8900BC8AED /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				12A782651757832C00DD5E0A /* lauch_640_1136.png */,
+				12A782661757832C00DD5E0A /* launch_320_480.png */,
+				12A782671757832C00DD5E0A /* launch_640_960.png */,
 				12048FC8174D4D8900BC8AED /* icon-tab-myAttendingMeeting.png */,
 				12048FC9174D4D8900BC8AED /* icon-tab-myFoundedMeeting.png */,
 				12048FCA174D4D8900BC8AED /* icon-tab-myPpt.png */,
@@ -159,6 +174,9 @@
 		12124CF017352CD7009C22F2 = {
 			isa = PBXGroup;
 			children = (
+				12A7826F1757836200DD5E0A /* Default-568h@2x.png */,
+				12A7826D1757834C00DD5E0A /* Default@2x.png */,
+				12A7826B1757834200DD5E0A /* Default.png */,
 				123F3EB6173819A8007E87E7 /* CFNetwork.framework */,
 				12570E7917363DDE00207229 /* icon_114.png */,
 				12570E7717363DD600207229 /* icon_54.png */,
@@ -362,6 +380,12 @@
 				12048FCB174D4D8900BC8AED /* icon-tab-myAttendingMeeting.png in Resources */,
 				12048FCC174D4D8900BC8AED /* icon-tab-myFoundedMeeting.png in Resources */,
 				12048FCD174D4D8900BC8AED /* icon-tab-myPpt.png in Resources */,
+				12A782681757832C00DD5E0A /* lauch_640_1136.png in Resources */,
+				12A782691757832C00DD5E0A /* launch_320_480.png in Resources */,
+				12A7826A1757832C00DD5E0A /* launch_640_960.png in Resources */,
+				12A7826C1757834200DD5E0A /* Default.png in Resources */,
+				12A7826E1757834C00DD5E0A /* Default@2x.png in Resources */,
+				12A782701757836200DD5E0A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +479,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Bowen Liang (EL3AGDQS69)";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bowen Liang (EL3AGDQS69)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -471,8 +495,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BC8726A9-A1F5-4461-B5C1-115B3861D82A";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -489,8 +512,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Bowen Liang (EL3AGDQS69)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bowen Liang (EL3AGDQS69)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bowen Liang (MP9FQ8XN33)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -498,8 +521,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D1F8BA50-30E3-4296-8ABD-9020C268B100";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -514,7 +536,7 @@
 				INFOPLIST_FILE = "LivePPT/LivePPT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -528,7 +550,7 @@
 				INFOPLIST_FILE = "LivePPT/LivePPT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
